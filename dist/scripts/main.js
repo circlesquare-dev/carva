@@ -18,6 +18,7 @@ function animateProducts(productAnimate, productCover) {
 	var delayItem = arguments.length <= 2 || arguments[2] === undefined ? 0.15 : arguments[2];
 	var yAnimation = arguments.length <= 3 || arguments[3] === undefined ? 60 : arguments[3];
 	var topOffset = arguments.length <= 4 || arguments[4] === undefined ? 500 : arguments[4];
+	var mainDelay = arguments.length <= 5 || arguments[5] === undefined ? 0.25 : arguments[5];
 
 	var productItem = productAnimate;
 	var section = productCover;
@@ -32,7 +33,7 @@ function animateProducts(productAnimate, productCover) {
 		transition: 'none'
 	});
 
-	var tl = new TimelineMax().staggerTo(productItem, 0.4, {
+	var tl = new TimelineMax({ delay: mainDelay }).staggerTo(productItem, 0.4, {
 		y: 0,
 		autoAlpha: 1,
 		clearProps: 'transition, transform, opacity',
@@ -85,6 +86,7 @@ function addAnimateClass(productAnimate, productCover) {
 // Parallax animation end
 
 var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+// var mobDev = false;
 
 // function readyPage() {
 // 	if (!mobDev) {
@@ -210,7 +212,9 @@ $(document).ready(function () {
 	// Animation just for web start
 
 	if (!mobDev) {
-		animateProducts('.about-us .fade-up', '.about-us');
+		animateProducts('.hw-list li', '.how-it-works');
+		animateProducts('.testimonials .tt-info', '.testimonials');
+
 		addAnimateClass('.solutions .svg_item', '.solutions');
 	} else {
 		$('body').addClass('show-svg');
@@ -259,8 +263,6 @@ $(document).ready(function () {
 	// build scenes
 	new ScrollMagic.Scene({ triggerElement: cSection }).setTween(pItem, { y: yAnimate, ease: Linear.easeNone }).addTo(controller);
 }
-
-// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
 
 if (!mobDev) {
 	parallaxScroll('.how-it-works', '.hw-img1 img', '-7%');
