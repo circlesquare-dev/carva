@@ -1,0 +1,106 @@
+.preloader
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 20
+  background: #fff
+  display: flex
+  justify-content: center
+  align-items: center
+
+.preloader__ico
+  display: none
+  flex: 0 0 auto
+
+.btn
+  &_black
+    background: $main
+    padding: 18px 70px
+    color: #fff
+    font-family: $f-title
+    font-weight: $bd
+    font-size: 16px
+    line-height: 34px
+    text-align: center
+    text-decoration: none
+
+.bg-icons
+  position: absolute
+  pointer-events: none
+  z-index: -1
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  .bg-icon
+    position: absolute
+
+.slider_nav
+  position: absolute
+  z-index: 2
+  top: 50%
+  transform: translateY(-50%)
+  width: 100%
+  &-prev, &-next
+    position: absolute
+    top: 0
+    width: 55px
+    height: 53px
+    border-radius: 100%
+    background: #000
+    color: #fff
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &-prev
+    left: -110px
+
+  &-next
+    right: -110px
+
+
+.slider_dots
+  position: absolute
+  left: 0
+  right: 0
+  bottom: -75px
+  margin: auto
+  padding: 0
+  text-align: center
+  list-style: none
+  li
+    display: inline-block
+    width: 6px
+    height: 6px
+    margin: 0 6px
+    line-height: 0
+    button
+      display: inline-block
+      width: 6px
+      height: 6px
+      padding: 0
+      margin: 0
+      border: 1px solid #000
+      background: rgba(#000, 0)
+      border-radius: 100%
+      font-size: 0
+      transition: background 300ms ease-out
+    &.slick-active
+      button
+        background: #000
+.show-svg
+  svg.svg_item
+    path
+      opacity: 1
+      stroke-dashoffset: 0
+      stroke-dasharray: 0
+      transform: translateY(0)
+
+//Class for lettering
+
+.ln
+  display: block

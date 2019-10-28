@@ -1,0 +1,34 @@
+.main-cover
+  background: #FFE170
+  position: relative
+  &, .main-row
+    height: 800px
+    @media(max-width: 992px)
+      height: auto
+
+  &_bg-video
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    padding: 90px 144px 0 113px
+    .bg-video_wrap
+      height: 100%
+      background: #000
+      color: #fff
+      .bg-video_slider, .bg-video_slide, .slick-slider .slick-list, .slick-slider .slick-track
+        height: 100%
+
+      video
+        width: 100%
+        height: 100%
+        object-fit: cover
+  &_title
+    padding-left: 12px
+    &, .h1-title
+      color: #fff
+
+    .sub-title
+      display: block
+      margin-bottom: 31px

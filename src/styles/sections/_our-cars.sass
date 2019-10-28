@@ -1,0 +1,74 @@
+.our-cars
+  padding: 103px 0 183px
+  &, .b-container
+    position: relative
+
+  .bg-icons
+    z-index: 0
+    .bg-icon1
+      width: 1368px
+      height: 1368px
+      left: -684px
+      top: -512px
+      background: $yellowDark
+      opacity: 0.45
+      border-radius: 100%
+
+.oc
+  &-bg
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    width: calc(100% + 130px)
+    height: calc(100% + 286px)
+    margin: -103px -65px 0
+    background: $gray
+
+  &-title
+    padding-right: 20px
+    margin-bottom: 72px
+    .h-title
+      margin-bottom: 26px
+
+  &-slider
+    margin: 0 -45px 114px
+    &_wrap
+      position: relative
+
+  &-slide
+    margin-bottom: 50px
+    padding: 0 45px
+    &_img
+      margin-bottom: 20px
+    &_title
+      margin-bottom: 6px
+      *
+        @extend h5
+
+    &_info
+      border-top: 1px solid #000
+      border-bottom: 1px dashed #fff
+      padding: 14px 0 26px
+      margin-bottom: 11px
+
+
+    &_price
+      border-top: 1px solid #000
+      &_info
+        padding: 14px 0 17px
+        text-transform: uppercase
+        font-family: $f-main
+        font-weight: $bd
+        font-size: 12px
+        line-height: 22px
+        letter-spacing: 1.21071px
+
+      &_type
+        background: #000
+        color: #fff
+        font-family: $f-title
+        font-weight: $bd
+        font-size: 14px
+        line-height: 16px
+        padding: 9px 10px

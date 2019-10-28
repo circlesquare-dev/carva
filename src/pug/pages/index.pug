@@ -1,0 +1,49 @@
+doctype html
+html
+    head
+        title Carve
+        meta(charset='utf-8')
+        meta(name='viewport', content='initial-scale=1.0, width=device-width')
+        meta(name='theme-color', content='#ffffff')
+
+        link(type='text/css' rel='stylesheet' href='styles/styles.min.css')
+
+    body
+        .preloader
+            .preloader__ico
+                svg.uil-ring-alt(xmlns='http://www.w3.org/2000/svg', width='80' height='80' viewBox='0 0 120 120',
+                preserveAspectRatio='xMidYMid')
+                    defs
+                        lineargradient#b(gradientTransform='matrix(-220.584381 246.706207 246.706207 220.584381 -365250.09375 63860.753906)', gradientUnits='userSpaceOnUse', x1='-880.012024', x2='-879.012024', y1='694.5672', y2='694.5672')
+                            stop(offset='0', stop-color='#f05752')
+                            stop(offset='.160029', stop-color='#f0554f')
+                            stop(offset='.294755', stop-color='#f04f44')
+                            stop(offset='.419916', stop-color='#ef4533')
+                            stop(offset='.48793', stop-color='#ef3d26')
+                            stop(offset='1', stop-color='#f9cc21')
+                    circle(cx='60', cy='60', r='40', stroke='url(#b)', fill='none', stroke-width='30', stroke-linecap='round')
+                        animate(attributeName='stroke-dashoffset', dur='3s', repeatCount='indefinite', from='502', to='0')
+                        animate(attributeName='stroke-dasharray', dur='3s', repeatCount='indefinite', values='188.25 62.75;1 250;188.25 62.75')
+
+
+
+        main
+            include ../sections/main/header
+
+            include ../sections/home_page/main-cover
+            include ../sections/home_page/partners
+            include ../sections/home_page/how-it-works
+            include ../sections/home_page/platform-info
+            include ../sections/home_page/our-cars
+            include ../sections/home_page/img-section
+            include ../sections/home_page/testimonials
+
+            include ../sections/main/footer
+
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js')
+
+        script(src='scripts/slick.min.js')
+        script(src='scripts/main.min.js')

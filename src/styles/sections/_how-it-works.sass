@@ -1,0 +1,89 @@
+.how-it-works
+  position: relative
+  padding-bottom: 194px
+  background: $grayLight
+  &:after
+    content: ''
+    position: absolute
+    z-index: 0
+    left: 0
+    right: 0
+    bottom: 0
+    height: 60%
+    margin: 0 -16px
+    background: #fff
+
+  .row
+    position: relative
+    z-index: 1
+  .bg-icons
+    z-index: 0
+    .bg-icon1
+      width: 670px
+      height: 670px
+      right: -495px
+      top: -86px
+      background: $red
+      opacity: 0.45
+      border-radius: 100%
+
+.hw
+  &-title
+    padding-left: 70px
+  &-list
+    background: #fff
+    padding: 105px 181px 0 72px
+    margin: 64px -16px 0
+    list-style: none
+    li
+      border-top: 1px solid $gray
+      padding: 80px 5px 80px 30px
+      display: flex
+      align-items: center
+      &:last-child
+        border-bottom: 1px solid $gray
+    &_num
+      font-family: $f-title
+      font-weight: $bd
+      font-size: 85px
+      line-height: 60px
+      letter-spacing: -0.784615px
+      color: $yellowDark
+      flex: 0 1 85px
+      margin-right: 55px
+      min-width: 85px
+    &_info
+
+  &-img
+    position: relative
+    height: 100%
+    img
+      width: 120%
+      height: 120%
+      object-fit: cover
+      position: absolute
+      left: -10%
+      top: -10%
+      transition: transform 0.5s ease-out
+    .btn_black
+      position: absolute
+      left: -84px
+      bottom: 259px
+    &1, &2, &3
+      position: absolute
+      overflow: hidden
+    &1
+      bottom: 61px
+      right: -8px
+      width: 424px
+      height: 636px
+    &2
+      top: 89px
+      right: 0
+      width: 256px
+      height: 384px
+    &3
+      top: 234px
+      left: -123px
+      width: 397px
+      height: 273px
