@@ -16,7 +16,7 @@ section.main-cover
             //            source(src="video/video-1.mp4" type="video/mp4")
     .b-container-fluid
         .main-row.row.align-items-center
-            .col-6.offset-1
+            .col-lg-6.offset-md-1.col-12.offset-0
                 .main-cover_title
                     p.sub-title Welcome to Carve
                     h1.h1-title Adventure is waiting
@@ -25,8 +25,15 @@ section.main-cover
             h6 Get Started
         .mc_section
             h6 Pickup
-            .mc_select
-                input#datetimepicker(type='text')
+            .mc_select.mc_select_date
+                input.pickup_data(type='text' placeholder='Date')
+            .mc_select.mc_select_time
+                input.pickup_time(type='text' placeholder='Time')
         .mc_section
+            h6 Dropoff
+            .mc_select.mc_select_date
+                input.dropoff_data(type='text' placeholder='Date')
+            .mc_select.mc_select_time
+                input.dropoff_time(type='text' placeholder='Time')
         .mc_btn
-
+            button Search

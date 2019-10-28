@@ -4,6 +4,8 @@
   text-align: center
   position: relative
   overflow: hidden
+  @media(max-width: 992px)
+    padding: 100px 0
   .bg-icons
     z-index: 0
     .bg-icon1
@@ -18,5 +20,9 @@
 .partner
   &_img
     line-height: 0
+    @media(max-width: 992px)
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
     img
       opacity: 0.4

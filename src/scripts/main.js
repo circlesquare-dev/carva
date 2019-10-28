@@ -88,6 +88,30 @@ var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAge
 
 $(document).ready( function(){
 	
+	// Data script start
+	
+	$('.pickup_data').datetimepicker({
+		timepicker:false,
+		format:'d.m.Y',
+		minDate:'0',
+	});
+	$('.pickup_time').datetimepicker({
+		datepicker:false,
+		format:'H:i'
+	});
+	
+	$('.dropoff_data').datetimepicker({
+		timepicker:false,
+		format:'d.m.Y',
+		minDate:'0',
+	});
+	$('.dropoff_time').datetimepicker({
+		datepicker:false,
+		format:'H:i'
+	});
+
+// Data script end
+	
 	// slider for cover section start
 	
 	$('.pi-slider').slick({
@@ -99,12 +123,42 @@ $(document).ready( function(){
 		dotsClass: 'slider_dots'
 	});
 	
+	$('.ims-items_slider').slick({
+		infinite: true,
+		fade: true,
+		adaptiveHeight: true,
+		dots: true,
+		dotsClass: 'slider_dots',
+		prevArrow: '.ims-item-prev',
+		nextArrow: '.ims-item-next'
+	});
+	
 	$('.oc-slider').slick({
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		prevArrow: '.oc-prev',
-		nextArrow: '.oc-next'
+		nextArrow: '.oc-next',
+		dotsClass: 'slider_dots',
+		responsive: [
+			{
+				breakpoint: 1367,
+				settings: {
+					infinite: true,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					prevArrow: '.oc-prev',
+					nextArrow: '.oc-next',
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 1,
+					dots: true,
+				}
+			}
+		]
 	});
 	
 	if($('.bg-video_slider').length) {

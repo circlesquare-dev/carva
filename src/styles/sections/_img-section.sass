@@ -1,7 +1,12 @@
 .img-section
   position: relative
+  @media(max-width: 992px)
+    padding: 80px 0
+    overflow: hidden
   &, .row
     height: 859px
+    @media(max-width: 992px)
+      height: auto
   .bg-icons
     z-index: 0
     .bg-icon1
@@ -13,6 +18,33 @@
       margin: auto
       background: $orange
       border-radius: 100%
+      @media(max-width: 992px)
+        bottom: -100px
+.ims
+  &-items
+    @media(max-width: 992px)
+      display: none
+  &-items_slider-wrap
+    display: none
+    position: relative
+    .slider_nav-prev
+      left: 0
+    .slider_nav-next
+      right: 0
+
+    .ims-items_slider
+      padding: 0
+      margin: 0
+      list-style: none
+
+    li
+      max-height: 500px
+      img
+        width: 100%
+        height: auto
+        object-fit: cover
+    @media(max-width: 992px)
+      display: block
 
 .ims-img
   position: absolute

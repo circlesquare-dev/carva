@@ -32,10 +32,10 @@
         <header class="main-header c-height">
             <div class="b-container-fluid">
                 <div class="main-row row align-items-center">
-                    <div class="col-xl-5 col-3">
+                    <div class="col-xl-5 col-8">
                         <div class="main-header_logo"><a href="#"><img src="images/mainLogo.svg" alt="logo"></a></div>
                     </div>
-                    <div class="col-xl-6 col-9">
+                    <div class="col-xl-6 col-4">
                         <div class="main-header_menu"><a href="#">Sign up</a><a href="#">Login</a><a href="#">Help</a></div>
                         <div class="main-header_d-menu">
                             <div class="hamburger"><span></span><span></span><span></span></div>
@@ -72,7 +72,7 @@
             </div>
             <div class="b-container-fluid">
                 <div class="main-row row align-items-center">
-                    <div class="col-6 offset-1">
+                    <div class="col-lg-6 offset-md-1 col-12 offset-0">
                         <div class="main-cover_title">
                             <p class="sub-title">Welcome to Carve</p>
                             <h1 class="h1-title">Adventure is waiting</h1>
@@ -86,10 +86,15 @@
                 </div>
                 <div class="mc_section">
                     <h6>Pickup</h6>
-                    <div class="mc_select"><input id="datetimepicker" type="text"></div>
+                    <div class="mc_select mc_select_date"><input class="pickup_data" type="text" placeholder="Date"></div>
+                    <div class="mc_select mc_select_time"><input class="pickup_time" type="text" placeholder="Time"></div>
                 </div>
-                <div class="mc_section"></div>
-                <div class="mc_btn"></div>
+                <div class="mc_section">
+                    <h6>Dropoff</h6>
+                    <div class="mc_select mc_select_date"><input class="dropoff_data" type="text" placeholder="Date"></div>
+                    <div class="mc_select mc_select_time"><input class="dropoff_time" type="text" placeholder="Time"></div>
+                </div>
+                <div class="mc_btn"><button>Search</button></div>
             </div>
         </section>
         <section class="partners">
@@ -97,10 +102,10 @@
                 <div class="bg-icon bg-icon1"></div>
             </div>
             <div class="b-container">
-                <div class="row justify-content-between align-items-center">
-                    <div class="col-3 partner_img"><img src="images/partner1.svg" alt=""></div>
-                    <div class="col-3 partner_img"><img src="images/partner2.svg" alt=""></div>
-                    <div class="col-3 partner_img"><img src="images/partner3.svg" alt=""></div>
+                <div class="row justify-content-lg-between justify-content-around align-items-center">
+                    <div class="col-lg-3 col-md-6 partner_img"><img src="images/partner1.svg" alt=""></div>
+                    <div class="col-lg-3 col-md-6 partner_img"><img src="images/partner2.svg" alt=""></div>
+                    <div class="col-lg-3 col-md-6 partner_img"><img src="images/partner3.svg" alt=""></div>
                 </div>
             </div>
         </section>
@@ -110,7 +115,7 @@
             </div>
             <div class="b-container-fluid">
                 <div class="row">
-                    <div class="col-7">
+                    <div class="col-xl-7 col-lg-12 order-xl-1 order-2">
                         <ul class="hw-list">
                             <li>
                                 <div class="hw-list_num">
@@ -141,7 +146,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-5">
+                    <div class="col-xl-5 col-lg-8 order-xl-2 order-1">
                         <div class="hw-title">
                             <h2 class="h-title">How it works</h2>
                         </div>
@@ -157,7 +162,7 @@
         <section class="platform-info">
             <div class="b-container">
                 <div class="row justify-content-center">
-                    <div class="col-7">
+                    <div class="col-lg-7 col-md-10 col-12">
                         <div class="pi-title">
                             <h2 class="h-title text-c">This is Carve</h2>
                             <p class="title-info text-c">Renting a car should be about getting you in the perfect car as quickly and effortlessly as
@@ -171,12 +176,12 @@
                             <div class="pi-slider">
                                 <div class="pi-slide">
                                     <div class="row justify-content-center">
-                                        <div class="col-9">
+                                        <div class="col-xl-9 col-md-11 col-12">
                                             <div class="pi-slide_img text-c"><img src="images/pi_img.png" srcset="images/pi_img@2x.png 2x" alt="img"></div>
                                         </div>
                                     </div>
                                     <div class="row justify-content-center">
-                                        <div class="col-5">
+                                        <div class="col-xl-5 col-md-9 col-12">
                                             <div class="pi-slide_info">
                                                 <h5 class="text-c">Seamless Pickup and Dropoff</h5>
                                                 <p class="pi-slide_text text-c">No lines, no paperwork, and no people. Free Uber credit to get you there and
@@ -187,12 +192,12 @@
                                 </div>
                                 <div class="pi-slide">
                                     <div class="row justify-content-center">
-                                        <div class="col-9">
+                                        <div class="col-xl-9 col-md-11 col-12">
                                             <div class="pi-slide_img text-c"><img src="images/pi_img.png" srcset="images/pi_img@2x.png 2x" alt="img"></div>
                                         </div>
                                     </div>
                                     <div class="row justify-content-center">
-                                        <div class="col-5">
+                                        <div class="col-xl-5 col-md-9 col-12">
                                             <div class="pi-slide_info">
                                                 <h5 class="text-c">Seamless Pickup and Dropoff</h5>
                                                 <p class="pi-slide_text text-c">No lines, no paperwork, and no people. Free Uber credit to get you there and
@@ -222,13 +227,15 @@
             <div class="b-container">
                 <div class="oc-bg"></div>
                 <div class="row">
-                    <div class="col-7">
+                    <div class="col-lg-7 offset-lg-0 col-md-10 offset-md-1 offset-0">
                         <div class="oc-title">
                             <p class="sub-title">Detail</p>
                             <h2 class="h-title">Our Cars</h2>
                             <p class="title-info">We partner with dealerships to rent out cars that would otherwise just sit on the lot, which means you get the coolest cars at the best prices.</p>
                         </div>
                     </div>
+                </div>
+                <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="oc-slider_wrap">
                             <div class="oc-slider">
@@ -380,6 +387,22 @@
                             <div class="ims-img ims-img3"><img src="images/b-img3.jpg" srcset="images/b-img3@2x.jpg 2x" alt=""></div>
                             <div class="ims-img ims-img4"><img src="images/b-img4.jpg" srcset="images/b-img4@2x.jpg 2x" alt=""></div>
                         </div>
+                        <div class="ims-items_slider-wrap">
+                            <ul class="ims-items_slider">
+                                <li><img src="images/b-img1.jpg" srcset="images/b-img1@2x.jpg 2x" alt=""></li>
+                                <li><img src="images/b-img2.jpg" srcset="images/b-img2@2x.jpg 2x" alt=""></li>
+                                <li><img src="images/b-img3.jpg" srcset="images/b-img3@2x.jpg 2x" alt=""></li>
+                                <li><img src="images/b-img4.jpg" srcset="images/b-img4@2x.jpg 2x" alt=""></li>
+                            </ul>
+                            <div class="slider_nav">
+                                <div class="ims-item-prev slider_nav-prev"><svg width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7992 25.4561C12.5314 26.1813 13.7186 26.1813 14.4508 25.4561C15.1831 24.7308 15.1831 23.5549 14.4508 22.8296L4.52664 13L14.4508 3.17029C15.1831 2.44507 15.1831 1.26913 14.4508 0.543911C13.7186 -0.181305 12.5314 -0.181305 11.7992 0.543911L0.549169 11.6868C-0.183057 12.412 -0.183057 13.5879 0.549169 14.3132L11.7992 25.4561Z" fill="white"></path>
+                                    </svg></div>
+                                <div class="ims-item-next slider_nav-next"><svg width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.20083 0.543945C2.46859 -0.181315 1.28141 -0.181315 0.549174 0.543945C-0.183058 1.26921 -0.183058 2.44508 0.549174 3.17035L10.4734 13L0.549174 22.8297C-0.183058 23.5549 -0.183058 24.7309 0.549174 25.4561C1.28141 26.1813 2.46859 26.1813 3.20083 25.4561L14.4508 14.3132C15.1831 13.588 15.1831 12.4121 14.4508 11.6868L3.20083 0.543945Z" fill="white"></path>
+                                    </svg></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -387,47 +410,47 @@
         <section class="testimonials">
             <div class="b-container">
                 <div class="row justify-content-center">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-md-9 col-12">
                         <div class="tt-title">
                             <h2 class="h-title text-c">The future of car ownership</h2>
                             <p class="sub-title text-c">The journey is the destination</p>
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="row justify-content-between">
-                            <div class="col-3">
+                        <div class="row justify-content-md-between justify-content-center">
+                            <div class="col-lg-3 col-md-4 col-11">
                                 <div class="tt-info">
                                     <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
                                     <p>Name and profession</p>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-lg-3 col-md-4 col-11">
                                 <div class="tt-info">
                                     <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
                                     <p>Name and profession</p>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-lg-3 col-md-4 col-11">
                                 <div class="tt-info">
                                     <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
                                     <p>Name and profession</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-between">
-                            <div class="col-3">
+                        <div class="row justify-content-md-between justify-content-center">
+                            <div class="col-lg-3 col-md-4 col-11">
                                 <div class="tt-info">
                                     <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
                                     <p>Name and profession</p>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-lg-3 col-md-4 col-11">
                                 <div class="tt-info">
                                     <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
                                     <p>Name and profession</p>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-lg-3 col-md-4 col-11">
                                 <div class="tt-info">
                                     <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
                                     <p>Name and profession</p>
@@ -441,11 +464,11 @@
         <footer class="footer">
             <div class="b-container">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-5">
+                    <div class="col-md-5 col-12 order-md-1 order-2">
                         <div class="social-icons"><a href="#"><img src="images/twitter.svg" alt="twitter"></a><a href="#"><img src="images/instagram.svg" alt="instagram"></a><a href="#"><img src="images/fb.svg" alt="facebook"></a></div>
                     </div>
-                    <div class="col-2 text-c"><a class="footer-logo" href="#"><img src="images/logo.svg" alt="logo"></a></div>
-                    <div class="col-5 text-r">
+                    <div class="col-md-2 col-12 text-c order-md-2 order-1"><a class="footer-logo" href="#"><img src="images/logo.svg" alt="logo"></a></div>
+                    <div class="col-md-5 col-12 order-3 text-c">
                         <div class="footer_links"><a href="#">Contact</a><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Help</a></div>
                     </div>
                 </div>
@@ -457,6 +480,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
     <script src="scripts/slick.min.js"></script>
+    <script src="scripts/jquery.datetimepicker.full.min.js"></script>
     <script src="scripts/main.min.js"></script>
 </body>
 

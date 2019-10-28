@@ -10,10 +10,6 @@ function parallaxScroll(coverSection, parallaxItem, yAnimate = '-10%') {
 	.addTo(controller);
 }
 
-
-// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-var mobDev = false;
-
 if (!mobDev) {
 	parallaxScroll('.how-it-works', '.hw-img1 img', '-7%');
 	parallaxScroll('.how-it-works', '.hw-img2 img');

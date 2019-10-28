@@ -3,16 +3,19 @@
   left: 0
   top: 0
   width: 100%
-  z-index: 5
+  z-index: 6
+  background: $yellow
   @media(max-width: 992px)
     position: relative
   &, .main-row
-    height: 90px
+    height: 100px
   &_logo
     position: relative
     z-index: 2
     line-height: 0
     padding-left: 20px
+    @media(max-width: 992px)
+      padding-left: 0
     a
       text-decoration: none
 
@@ -38,8 +41,7 @@
       transition: color 300ms ease-out, background 300ms ease-out
       position: relative
       &:last-child
-        @media(max-width: 1024px)
-          margin-right: 0
+        margin-right: 0
 
       &:hover
         color: $blue

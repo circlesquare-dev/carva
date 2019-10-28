@@ -2,9 +2,12 @@
   background: #FFE170
   position: relative
   &, .main-row
-    height: 800px
+    height: 100vh
+    min-height: 600px
+    max-height: 800px
     @media(max-width: 992px)
       height: auto
+      max-height: none
 
   &_bg-video
     position: absolute
@@ -13,6 +16,11 @@
     right: 0
     bottom: 0
     padding: 90px 144px 0 113px
+    @media(max-width: 1280px)
+      padding: 90px 60px 0
+    @media(max-width: 992px)
+      padding: 0
+
     .bg-video_wrap
       height: 100%
       background: #000
@@ -26,9 +34,104 @@
         object-fit: cover
   &_title
     padding-left: 12px
+    @media(max-width: 992px)
+      padding: 0
     &, .h1-title
       color: #fff
 
     .sub-title
       display: block
       margin-bottom: 31px
+
+.mc
+  &_form
+    position: absolute
+    z-index: 5
+    right: 0
+    bottom: -1px
+    background: #F5F0EE
+    display: inline-flex
+    max-width: min-content
+    @media(max-width: 992px)
+      position: relative
+      max-width: 100%
+      display: flex
+      flex-wrap: wrap
+  &_title
+    padding: 47px 30px 20px
+    @media(max-width: 992px)
+      max-width: 20%
+      flex: 0 1 20%
+      padding: 27px 30px 20px
+    @media(max-width: 576px)
+      max-width: 100%
+      flex: 0 1 100%
+      padding: 30px 20px 15px
+    h6
+      font-family: $f-title
+      font-weight: $bd
+      font-size: 16px
+      line-height: 19px
+  &_section
+    margin: 15px 0
+    padding: 0 30px
+    display: flex
+    flex-wrap: wrap
+    flex: 0 0
+    min-width: 280px
+    border-left: 1px solid rgba(#979797,0.2)
+    @media(max-width: 992px)
+      max-width: 40%
+      flex: 0 1 40%
+      min-width: 40%
+    @media(max-width: 576px)
+      max-width: 100%
+      flex: 0 1 100%
+      min-width: 100%
+      padding: 0 20px
+    h6
+      padding: 32px 0 14px
+      flex: 1 1 100%
+      font-family: $f-title
+      font-weight: $bd
+      font-size: 16px
+      line-height: 19px
+      @media(max-width: 992px)
+        padding: 12px 0 14px
+  &_btn
+    background: $yellow
+    @media(max-width: 992px)
+      text-align: center
+      min-width: 100%
+      flex: 0 1 100%
+    button
+      padding: 50px 90px
+      background: $yellow
+      border: none
+      font-family: $f-title
+      font-weight: $bd
+      font-size: 16px
+      line-height: 19px
+      transition: background 300ms ease-out, color 300ms ease-out
+      @media(max-width: 992px)
+        padding: 30px
+      &:hover
+        background: $main
+        color: #fff
+  &_select
+    margin-right: 40px
+    &_date
+      max-width: 100px
+      flex: 0 1 100px
+    &_time
+      max-width: 70px
+      flex: 0 1 70px
+    &:last-child
+      margin-right: 0
+    input
+      width: 100%
+      border: none
+      cursor: pointer
+      color: #8E8E8E
+      padding-right: 15px
+      background: #F5F0EE url('../images/arrow-bg.svg') right center no-repeat
