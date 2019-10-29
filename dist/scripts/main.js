@@ -89,8 +89,8 @@ function addAnimateClass(productAnimate, productCover) {
 
 // Parallax animation end
 
-// let mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-var mobDev = false;
+var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+// let mobDev = false;
 
 function readyPage() {
 	if (!mobDev) {
@@ -102,11 +102,11 @@ $(window).on('scroll', function () {
 	$('video').each(function () {
 		if ($(this).is(":in-viewport")) {
 			$(this)[0].play();
-			console.log('play');
+			// console.log('play')
 		} else {
-			$(this)[0].pause();
-			console.log('pause');
-		}
+				$(this)[0].pause();
+				// console.log('pause')
+			}
 	});
 });
 
