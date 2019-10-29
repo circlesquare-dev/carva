@@ -5570,18 +5570,18 @@ html
     display: inline-block;
 }
 
-.k-norm .k-img_wrap
+.k-norm .k-img_wrap img
 {
-    overflow: hidden;
+    transition: .6s ease;
+    transform: translate3d(-3rem, 0, 0);
 
-    transform: scaleX(0);
-    transform-origin: right center;
+    opacity: 0;
 }
 
 .k-norm:before
 {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     top: 0;
     left: 0;
 
@@ -5596,60 +5596,50 @@ html
     background: #f5c2ad;
 }
 
-.k-animate .k-img_wrap
+.k-animate .k-img_wrap img
 {
-    animation: scaleBgMain 700ms ease-in 1;
+    transition-delay: 575ms;
+    transform: translateZ(0);
 
-    animation-fill-mode: forwards;
+    opacity: 1;
 }
 
 .k-animate:before
 {
     content: '';
-    animation: scaleBg 700ms ease-in 1;
+    animation: scaleBg 1575ms cubic-bezier(.81, .15, .26, .99) 1;
 
     animation-fill-mode: forwards;
 }
 
 @keyframes scaleBg
 {
-    from
+    0%
     {
-        transform: scaleX(0);
+        transform: translateZ(0) scaleY(1) scaleX(0);
     }
-    50%
+    45%
     {
-        transform: scaleX(1);
+        transform: translateZ(0) scaleY(1) scaleX(1);
     }
-    60%
+    55%
     {
-        transform: scaleX(1);
-    }
-    to
-    {
-        transform: scaleX(0);
-    }
-}
-
-@keyframes scaleBgMain
-{
-    from
-    {
-        transform: scaleX(0);
-    }
-    50%
-    {
-        transform: scaleX(1);
+        transform: translateZ(0) scaleY(1) scaleX(1);
     }
     to
     {
-        transform: scaleX(1);
+        transform: translate3d(100%, 0, 0) scaleY(1) scaleX(1);
     }
 }
 
 .show-img .k-img_wrap
 {
     transform: scaleX(1);
+}
+
+.show-img .tt-title
+{
+    top: 0;
 }
 
 .ln
@@ -5722,6 +5712,16 @@ body h1
         margin-bottom: 30px;
     }
 }
+@media (max-width: 330px)
+{
+    body h1
+    {
+        font-size: 50px;
+        line-height: 60px;
+
+        margin-bottom: 30px;
+    }
+}
 body h2
 {
     font-family: 'Libre Baskerville', serif;
@@ -5738,6 +5738,14 @@ body h2
     body h2
     {
         font-size: 50px;
+        line-height: 50px;
+    }
+}
+@media (max-width: 330px)
+{
+    body h2
+    {
+        font-size: 45px;
         line-height: 50px;
     }
 }
@@ -6601,6 +6609,7 @@ body .screen-height
 .hw-img
 {
     position: relative;
+    z-index: 2; 
 
     height: 100%;
 }
@@ -7105,6 +7114,14 @@ body .screen-height
     }
 }
 
+.tt-title
+{
+    position: relative;
+    z-index: 2;
+
+    transition: transform 500ms ease-out;
+}
+
 .tt-info
 {
     margin-top: 130px;
@@ -7196,6 +7213,13 @@ footer
     .footer_links a
     {
         margin-left: 45px;
+    }
+}
+@media (max-width: 768px)
+{
+    .footer_links a
+    {
+        margin-left: 30px;
     }
 }
 .footer_links a:first-child

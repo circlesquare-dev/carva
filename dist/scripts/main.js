@@ -19,7 +19,7 @@ function animateProducts(productAnimate, productCover) {
 	var xAnimation = arguments.length <= 2 || arguments[2] === undefined ? 0 : arguments[2];
 	var yAnimation = arguments.length <= 3 || arguments[3] === undefined ? 60 : arguments[3];
 	var opacityAnimation = arguments.length <= 4 || arguments[4] === undefined ? 0 : arguments[4];
-	var topOffset = arguments.length <= 5 || arguments[5] === undefined ? 300 : arguments[5];
+	var topOffset = arguments.length <= 5 || arguments[5] === undefined ? 400 : arguments[5];
 	var mainDelay = arguments.length <= 6 || arguments[6] === undefined ? 0.25 : arguments[6];
 
 	var productItem = productAnimate;
@@ -54,7 +54,7 @@ function animateProducts(productAnimate, productCover) {
 	new ScrollMagic.Scene({
 		triggerElement: section,
 		offset: topOffset,
-		reverse: true
+		reverse: false
 	}).setTween(tl).addTo(controller);
 }
 
@@ -219,14 +219,15 @@ $(document).ready(function () {
 	if (!mobDev) {
 		// Bg circles Animation start
 
-		animateProducts('.partners .bg-icons', '.partners', -40, 10, 1);
-		animateProducts('.how-it-works .bg-icons', '.how-it-works', 60, 30, 1);
-		animateProducts('.our-cars .bg-icons', '.our-cars', -70, 40, 1, -200);
+		animateProducts('.partners .bg-icons', '.partners', 0, 10, 1);
+		animateProducts('.how-it-works .bg-icons', '.how-it-works', 0, 30, 1);
+		animateProducts('.our-cars .bg-icons', '.our-cars', 0, 40, 1, -200);
+		animateProducts('.img-section .bg-icons', '.img-section', 0, 100, 1, 300);
 
 		// Bg circles Animation end
 
 		animateProducts('.partner_img .k-img', '.partners');
-		animateProducts('.hw-list li', '.how-it-works');
+		animateProducts('.how-it-works .fade-up', '.how-it-works');
 		animateProducts('.platform-info .fade-up', '.platform-info');
 		animateProducts('.our-cars .fade-up', '.our-cars');
 		animateProducts('.testimonials .fade-up', '.testimonials');
@@ -284,25 +285,32 @@ $(document).ready(function () {
 ;function parallaxScroll(coverSection, parallaxItem) {
 	var yAnimate = arguments.length <= 2 || arguments[2] === undefined ? '-40%' : arguments[2];
 	var yStart = arguments.length <= 3 || arguments[3] === undefined ? 0 : arguments[3];
+	var offsetTop = arguments.length <= 4 || arguments[4] === undefined ? 0 : arguments[4];
+	var mainDur = arguments.length <= 5 || arguments[5] === undefined ? '200%' : arguments[5];
 
 	var cSection = coverSection,
 	    pItem = parallaxItem,
-	    controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
+	    controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: mainDur } });
 
 	TweenMax.set(pItem, {
 		y: yStart
 	});
 
 	// build scenes
-	new ScrollMagic.Scene({ triggerElement: cSection }).setTween(pItem, { y: yAnimate, ease: Linear.easeNone }).addTo(controller);
+	new ScrollMagic.Scene({
+		triggerElement: cSection,
+		offset: offsetTop
+	}).setTween(pItem, { y: yAnimate, ease: Linear.easeNone }).addTo(controller);
 }
 
 if (!mobDev) {
-	parallaxScroll('.how-it-works', '.hw-img1', '-50%');
-	parallaxScroll('.how-it-works', '.hw-img2');
-	parallaxScroll('.how-it-works', '.hw-img3', '-67%');
+	parallaxScroll('.how-it-works', '.hw-img1', '-30%');
+	parallaxScroll('.how-it-works', '.hw-img2', '-60%');
+	parallaxScroll('.how-it-works', '.hw-img3', '-70%');
 
 	parallaxScroll('.img-section', '.ims-img1', '-47%');
 	parallaxScroll('.img-section', '.ims-img2', '-62%');
 	parallaxScroll('.img-section', '.ims-img3, .ims-img4');
+
+	parallaxScroll('.img-section', '.tt-title', '1px', '-600px', '900', '100%');
 }

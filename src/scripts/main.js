@@ -13,7 +13,7 @@ $(window).load(function () {
 
 // Parallax amination start
 
-function animateProducts(productAnimate, productCover, xAnimation = 0, yAnimation = 60, opacityAnimation = 0, topOffset = 300, mainDelay = 0.25) {
+function animateProducts(productAnimate, productCover, xAnimation = 0, yAnimation = 60, opacityAnimation = 0, topOffset = 400, mainDelay = 0.25) {
 	let productItem = productAnimate;
 	let section = productCover;
 	
@@ -47,7 +47,7 @@ function animateProducts(productAnimate, productCover, xAnimation = 0, yAnimatio
 	new ScrollMagic.Scene({
 		triggerElement: section,
 		offset: topOffset,
-		reverse: true
+		reverse: false
 	}).setTween(tl).addTo(controller);
 
 }
@@ -213,14 +213,15 @@ $(document).ready( function(){
 	if (!mobDev) {
 	// Bg circles Animation start
 	
-		animateProducts('.partners .bg-icons', '.partners', -40, 10, 1);
-		animateProducts('.how-it-works .bg-icons', '.how-it-works', 60, 30, 1);
-		animateProducts('.our-cars .bg-icons', '.our-cars', -70, 40, 1, -200);
+		animateProducts('.partners .bg-icons', '.partners', 0, 10, 1);
+		animateProducts('.how-it-works .bg-icons', '.how-it-works', 0, 30, 1);
+		animateProducts('.our-cars .bg-icons', '.our-cars', 0, 40, 1, -200);
+		animateProducts('.img-section .bg-icons', '.img-section', 0, 100, 1, 300);
 		
 	// Bg circles Animation end
 	
 		animateProducts('.partner_img .k-img', '.partners');
-		animateProducts('.hw-list li', '.how-it-works');
+		animateProducts('.how-it-works .fade-up', '.how-it-works');
 		animateProducts('.platform-info .fade-up', '.platform-info');
 		animateProducts('.our-cars .fade-up', '.our-cars');
 		animateProducts('.testimonials .fade-up', '.testimonials');

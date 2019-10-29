@@ -1,25 +1,31 @@
-function parallaxScroll(coverSection, parallaxItem, yAnimate = '-40%', yStart = 0) {
+function parallaxScroll(coverSection, parallaxItem, yAnimate = '-40%', yStart = 0, offsetTop = 0, mainDur = '200%') {
 	
 	let cSection = coverSection,
 			pItem = parallaxItem,
-			controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+			controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: mainDur}});
 	
 	TweenMax.set(pItem, {
 		y: yStart
 	});
 	
 	// build scenes
-	new ScrollMagic.Scene({triggerElement: cSection})
+	new ScrollMagic.Scene({
+		triggerElement: cSection,
+		offset: offsetTop,
+	})
 	.setTween(pItem, {y: yAnimate, ease: Linear.easeNone})
 	.addTo(controller);
 }
 
 if (!mobDev) {
-	parallaxScroll('.how-it-works', '.hw-img1', '-50%');
-	parallaxScroll('.how-it-works', '.hw-img2');
-	parallaxScroll('.how-it-works', '.hw-img3', '-67%');
-	
+	parallaxScroll('.how-it-works', '.hw-img1', '-30%');
+	parallaxScroll('.how-it-works', '.hw-img2', '-60%');
+	parallaxScroll('.how-it-works', '.hw-img3', '-70%');
+
 	parallaxScroll('.img-section', '.ims-img1', '-47%');
 	parallaxScroll('.img-section', '.ims-img2', '-62%');
 	parallaxScroll('.img-section', '.ims-img3, .ims-img4');
+	
+	
+	parallaxScroll('.img-section', '.tt-title', '1px', '-600px', '900', '100%');
 }
