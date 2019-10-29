@@ -14,6 +14,10 @@ function parallaxScroll(coverSection, parallaxItem, yAnimate = '-40%', yStart = 
 		offset: offsetTop,
 	})
 	.setTween(pItem, {y: yAnimate, ease: Linear.easeNone})
+	.setClassToggle(pItem, "active")
+	.on("end", function (e) {
+		$(pItem).toggleClass('end-parallax');
+	})
 	.addTo(controller);
 }
 
@@ -26,6 +30,7 @@ if (!mobDev) {
 	parallaxScroll('.img-section', '.ims-img2', '-62%');
 	parallaxScroll('.img-section', '.ims-img3, .ims-img4');
 	
+	parallaxScroll('.img-section', '.img-section .bg-icons', '5%');
 	
-	parallaxScroll('.img-section', '.tt-title', '1px', '-600px', '900', '100%');
+	parallaxScroll('.img-section', '.tt-title', '1px', '-700px', '1000', '100%');
 }

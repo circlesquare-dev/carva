@@ -102,11 +102,9 @@ $(window).on('scroll', function () {
 	$('video').each(function () {
 		if ($(this).is(":in-viewport")) {
 			$(this)[0].play();
-			// console.log('play')
 		} else {
-				$(this)[0].pause();
-				// console.log('pause')
-			}
+			$(this)[0].pause();
+		}
 	});
 });
 
@@ -234,7 +232,6 @@ $(document).ready(function () {
 		animateProducts('.partners .bg-icons', '.partners', 0, 10, 1);
 		animateProducts('.how-it-works .bg-icons', '.how-it-works', 0, 30, 1);
 		animateProducts('.our-cars .bg-icons', '.our-cars', 0, 40, 1, -200);
-		animateProducts('.img-section .bg-icons', '.img-section', 0, 100, 1, 300);
 
 		// Bg circles Animation end
 
@@ -312,7 +309,9 @@ $(document).ready(function () {
 	new ScrollMagic.Scene({
 		triggerElement: cSection,
 		offset: offsetTop
-	}).setTween(pItem, { y: yAnimate, ease: Linear.easeNone }).addTo(controller);
+	}).setTween(pItem, { y: yAnimate, ease: Linear.easeNone }).setClassToggle(pItem, "active").on("end", function (e) {
+		$(pItem).toggleClass('end-parallax');
+	}).addTo(controller);
 }
 
 if (!mobDev) {
@@ -324,5 +323,7 @@ if (!mobDev) {
 	parallaxScroll('.img-section', '.ims-img2', '-62%');
 	parallaxScroll('.img-section', '.ims-img3, .ims-img4');
 
-	parallaxScroll('.img-section', '.tt-title', '1px', '-600px', '900', '100%');
+	parallaxScroll('.img-section', '.img-section .bg-icons', '5%');
+
+	parallaxScroll('.img-section', '.tt-title', '1px', '-700px', '1000', '100%');
 }

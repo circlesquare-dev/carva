@@ -9,6 +9,12 @@
     position: relative
     z-index: 2
     transition: transform 500ms ease-out
+    .sub-title
+      opacity: 0
+      transition: opacity 300ms ease-out
+    &.end-parallax
+      .sub-title
+        opacity: 1
   &-info
     margin-top: 130px
     margin-bottom: 5px

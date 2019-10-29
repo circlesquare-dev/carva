@@ -5642,6 +5642,11 @@ html
     top: 0;
 }
 
+.show-img .sub-title
+{
+    opacity: 1;
+}
+
 .ln
 {
     display: block;
@@ -7120,6 +7125,16 @@ body .screen-height
     z-index: 2;
 
     transition: transform 500ms ease-out;
+}
+.tt-title .sub-title
+{
+    transition: opacity 300ms ease-out; 
+
+    opacity: 0;
+}
+.tt-title.end-parallax .sub-title
+{
+    opacity: 1;
 }
 
 .tt-info

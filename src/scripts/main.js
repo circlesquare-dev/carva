@@ -94,10 +94,8 @@ $(window).on('scroll', function() {
 	$('video').each(function(){
 		if ($(this).is(":in-viewport")) {
 			$(this)[0].play();
-			// console.log('play')
 		} else {
 			$(this)[0].pause();
-			// console.log('pause')
 		}
 	});
 });
@@ -228,7 +226,6 @@ $(document).ready( function(){
 		animateProducts('.partners .bg-icons', '.partners', 0, 10, 1);
 		animateProducts('.how-it-works .bg-icons', '.how-it-works', 0, 30, 1);
 		animateProducts('.our-cars .bg-icons', '.our-cars', 0, 40, 1, -200);
-		animateProducts('.img-section .bg-icons', '.img-section', 0, 100, 1, 300);
 		
 	// Bg circles Animation end
 	
