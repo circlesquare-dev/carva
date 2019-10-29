@@ -57,6 +57,9 @@
       img
         display: inline-block !important
         vertical-align: middle
+        transform: scale(0.95)
+        transform-origin: left bottom
+        transition: transform 0s 300ms ease-out
     &_title
       margin-bottom: 6px
       *
@@ -85,3 +88,8 @@
         font-size: 14px
         line-height: 16px
         padding: 9px 10px
+    &.slick-active
+      img
+        transform: scale(1)
+        transition: transform 300ms 400ms ease-out
+

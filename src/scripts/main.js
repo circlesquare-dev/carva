@@ -140,7 +140,7 @@ $(document).ready( function(){
 	});
 	
 	$('.oc-slider').slick({
-		infinite: true,
+		infinite: false,
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		prevArrow: '.oc-prev',
@@ -150,7 +150,6 @@ $(document).ready( function(){
 			{
 				breakpoint: 1367,
 				settings: {
-					infinite: true,
 					slidesToShow: 2,
 					slidesToScroll: 1,
 					prevArrow: '.oc-prev',
