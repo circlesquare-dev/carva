@@ -1,6 +1,7 @@
 // Preloader start
 
 $('.preloader__ico').fadeIn('slow');
+
 $(window).load(function () {
 	setTimeout(function () {
 		$('.preloader').fadeOut('slow');
@@ -12,9 +13,9 @@ $(window).load(function () {
 
 // Parallax amination start
 
-function animateProducts(productAnimate, productCover, delayItem = 0.15, yAnimation = 60, topOffset = 500, mainDelay = 0.25) {
-	var productItem = productAnimate;
-	var section = productCover;
+function animateProducts(productAnimate, productCover, xAnimation = 0, yAnimation = 60, opacityAnimation = 0, topOffset = 300, mainDelay = 0.25) {
+	let productItem = productAnimate;
+	let section = productCover;
 	
 	if (!$(section).length) {
 		return;
@@ -22,17 +23,19 @@ function animateProducts(productAnimate, productCover, delayItem = 0.15, yAnimat
 	
 	TweenMax.set(productItem, {
 		y: yAnimation,
-		autoAlpha: 0,
+		x: xAnimation,
+		autoAlpha: opacityAnimation,
 		transition: 'none'
 	});
 	
 	const tl = new TimelineMax({delay:mainDelay})
 		.staggerTo(productItem, 0.4, {
 			y: 0,
+			x: 0,
 			autoAlpha: 1,
 			clearProps: 'transition, transform, opacity',
 			ease:Power1.easeOut
-		}, delayItem);
+		}, 0.15);
 	
 	var controller = new ScrollMagic.Controller({
 		globalSceneOptions: {
@@ -49,7 +52,7 @@ function animateProducts(productAnimate, productCover, delayItem = 0.15, yAnimat
 
 }
 
-function addAnimateClass(productAnimate, productCover, classItem = 'svg_anim', offsetTop = 500, durItem = 0.5, delayItem = 0.15) {
+function addAnimateClass(productAnimate, productCover, classItem = 'k-animate', offsetTop = 300, durItem = 0.5, delayItem = 0.15) {
 	
 	var productItem = productAnimate;
 	var section = productCover;
@@ -71,15 +74,15 @@ function addAnimateClass(productAnimate, productCover, classItem = 'svg_anim', o
 	new ScrollMagic.Scene({
 		triggerElement: section,
 		offset: offsetTop,
-		reverse: true
+		reverse: false
 	}).setTween(tl).addTo(controller);
 	
 }
 
 // Parallax animation end
 
-var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-// var mobDev = false;
+let mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+// let mobDev = false;
 
 // function readyPage() {
 // 	if (!mobDev) {
@@ -119,6 +122,8 @@ $(document).ready( function(){
 		infinite: true,
 		fade: true,
 		dots: true,
+		autoplay: true,
+		speed: 3000,
 		prevArrow: '.pi-prev',
 		nextArrow: '.pi-next',
 		dotsClass: 'slider_dots'
@@ -207,13 +212,36 @@ $(document).ready( function(){
 	// Animation just for web start
 	
 	if (!mobDev) {
-		animateProducts('.hw-list li','.how-it-works');
-		animateProducts('.testimonials .tt-info','.testimonials');
+	// Bg circles Animation start
+	
+		animateProducts('.partners .bg-icons', '.partners', -40, 10, 1);
+		animateProducts('.how-it-works .bg-icons', '.how-it-works', 60, 30, 1);
+		animateProducts('.our-cars .bg-icons', '.our-cars', -70, 40, 1, -200);
 		
-		addAnimateClass('.solutions .svg_item','.solutions');
+	// Bg circles Animation end
+	
+		animateProducts('.partner_img .k-img', '.partners');
+		animateProducts('.hw-list li', '.how-it-works');
+		animateProducts('.platform-info .fade-up', '.platform-info');
+		animateProducts('.our-cars .fade-up', '.our-cars');
+		animateProducts('.testimonials .fade-up', '.testimonials');
+		animateProducts('.testimonials .tt-info', '.testimonials-items');
+	
+	// animation for images start
+	
+		addAnimateClass('.hw-img1 .k-norm', '.hw-img1');
+		addAnimateClass('.hw-img2 .k-norm', '.hw-img2');
+		addAnimateClass('.hw-img3 .k-norm', '.hw-img3');
 		
+		addAnimateClass('.ims-img1 .k-norm', '.ims-img1');
+		addAnimateClass('.ims-img2 .k-norm', '.ims-img2');
+		addAnimateClass('.ims-img3 .k-norm', '.ims-img3');
+		addAnimateClass('.ims-img4 .k-norm', '.ims-img4');
+	
+	// animation for images end
+
 	} else {
-		$('body').addClass('show-svg');
+		$('body').addClass('show-img');
 	}
 	
 	// Animation just for web end
@@ -233,9 +261,9 @@ $(document).ready( function(){
 	// Hamburger menu start
 	
 	$('.hamburger').on('click', function() {
-		var $containerMob = $('.main-header_d-menu');
-		var $mobMenu = $('.mob-menu');
-		var $thisActive = $containerMob.hasClass('active');
+		let $containerMob = $('.main-header_d-menu');
+		let $mobMenu = $('.mob-menu');
+		let $thisActive = $containerMob.hasClass('active');
 		
 		if($thisActive) {
 			$containerMob.removeClass('active');

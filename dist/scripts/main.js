@@ -3,6 +3,7 @@
 'use strict';
 
 $('.preloader__ico').fadeIn('slow');
+
 $(window).load(function () {
 	setTimeout(function () {
 		$('.preloader').fadeOut('slow');
@@ -15,10 +16,11 @@ $(window).load(function () {
 // Parallax amination start
 
 function animateProducts(productAnimate, productCover) {
-	var delayItem = arguments.length <= 2 || arguments[2] === undefined ? 0.15 : arguments[2];
+	var xAnimation = arguments.length <= 2 || arguments[2] === undefined ? 0 : arguments[2];
 	var yAnimation = arguments.length <= 3 || arguments[3] === undefined ? 60 : arguments[3];
-	var topOffset = arguments.length <= 4 || arguments[4] === undefined ? 500 : arguments[4];
-	var mainDelay = arguments.length <= 5 || arguments[5] === undefined ? 0.25 : arguments[5];
+	var opacityAnimation = arguments.length <= 4 || arguments[4] === undefined ? 0 : arguments[4];
+	var topOffset = arguments.length <= 5 || arguments[5] === undefined ? 300 : arguments[5];
+	var mainDelay = arguments.length <= 6 || arguments[6] === undefined ? 0.25 : arguments[6];
 
 	var productItem = productAnimate;
 	var section = productCover;
@@ -29,16 +31,18 @@ function animateProducts(productAnimate, productCover) {
 
 	TweenMax.set(productItem, {
 		y: yAnimation,
-		autoAlpha: 0,
+		x: xAnimation,
+		autoAlpha: opacityAnimation,
 		transition: 'none'
 	});
 
 	var tl = new TimelineMax({ delay: mainDelay }).staggerTo(productItem, 0.4, {
 		y: 0,
+		x: 0,
 		autoAlpha: 1,
 		clearProps: 'transition, transform, opacity',
 		ease: Power1.easeOut
-	}, delayItem);
+	}, 0.15);
 
 	var controller = new ScrollMagic.Controller({
 		globalSceneOptions: {
@@ -55,8 +59,8 @@ function animateProducts(productAnimate, productCover) {
 }
 
 function addAnimateClass(productAnimate, productCover) {
-	var classItem = arguments.length <= 2 || arguments[2] === undefined ? 'svg_anim' : arguments[2];
-	var offsetTop = arguments.length <= 3 || arguments[3] === undefined ? 500 : arguments[3];
+	var classItem = arguments.length <= 2 || arguments[2] === undefined ? 'k-animate' : arguments[2];
+	var offsetTop = arguments.length <= 3 || arguments[3] === undefined ? 300 : arguments[3];
 	var durItem = arguments.length <= 4 || arguments[4] === undefined ? 0.5 : arguments[4];
 	var delayItem = arguments.length <= 5 || arguments[5] === undefined ? 0.15 : arguments[5];
 
@@ -79,14 +83,14 @@ function addAnimateClass(productAnimate, productCover) {
 	new ScrollMagic.Scene({
 		triggerElement: section,
 		offset: offsetTop,
-		reverse: true
+		reverse: false
 	}).setTween(tl).addTo(controller);
 }
 
 // Parallax animation end
 
-// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-var mobDev = false;
+var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+// let mobDev = false;
 
 // function readyPage() {
 // 	if (!mobDev) {
@@ -126,6 +130,8 @@ $(document).ready(function () {
 		infinite: true,
 		fade: true,
 		dots: true,
+		autoplay: true,
+		speed: 3000,
 		prevArrow: '.pi-prev',
 		nextArrow: '.pi-next',
 		dotsClass: 'slider_dots'
@@ -212,13 +218,36 @@ $(document).ready(function () {
 	// Animation just for web start
 
 	if (!mobDev) {
-		animateProducts('.hw-list li', '.how-it-works');
-		animateProducts('.testimonials .tt-info', '.testimonials');
+		// Bg circles Animation start
 
-		addAnimateClass('.solutions .svg_item', '.solutions');
+		animateProducts('.partners .bg-icons', '.partners', -40, 10, 1);
+		animateProducts('.how-it-works .bg-icons', '.how-it-works', 60, 30, 1);
+		animateProducts('.our-cars .bg-icons', '.our-cars', -70, 40, 1, -200);
+
+		// Bg circles Animation end
+
+		animateProducts('.partner_img .k-img', '.partners');
+		animateProducts('.hw-list li', '.how-it-works');
+		animateProducts('.platform-info .fade-up', '.platform-info');
+		animateProducts('.our-cars .fade-up', '.our-cars');
+		animateProducts('.testimonials .fade-up', '.testimonials');
+		animateProducts('.testimonials .tt-info', '.testimonials-items');
+
+		// animation for images start
+
+		addAnimateClass('.hw-img1 .k-norm', '.hw-img1');
+		addAnimateClass('.hw-img2 .k-norm', '.hw-img2');
+		addAnimateClass('.hw-img3 .k-norm', '.hw-img3');
+
+		addAnimateClass('.ims-img1 .k-norm', '.ims-img1');
+		addAnimateClass('.ims-img2 .k-norm', '.ims-img2');
+		addAnimateClass('.ims-img3 .k-norm', '.ims-img3');
+		addAnimateClass('.ims-img4 .k-norm', '.ims-img4');
+
+		// animation for images end
 	} else {
-		$('body').addClass('show-svg');
-	}
+			$('body').addClass('show-img');
+		}
 
 	// Animation just for web end
 
@@ -254,22 +283,27 @@ $(document).ready(function () {
 });
 
 ;function parallaxScroll(coverSection, parallaxItem) {
-	var yAnimate = arguments.length <= 2 || arguments[2] === undefined ? '-10%' : arguments[2];
+	var yAnimate = arguments.length <= 2 || arguments[2] === undefined ? '-40%' : arguments[2];
+	var yStart = arguments.length <= 3 || arguments[3] === undefined ? 0 : arguments[3];
 
 	var cSection = coverSection,
 	    pItem = parallaxItem,
-	    controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "400%" } });
+	    controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
+
+	TweenMax.set(pItem, {
+		y: yStart
+	});
 
 	// build scenes
 	new ScrollMagic.Scene({ triggerElement: cSection }).setTween(pItem, { y: yAnimate, ease: Linear.easeNone }).addTo(controller);
 }
 
 if (!mobDev) {
-	parallaxScroll('.how-it-works', '.hw-img1 img', '-7%');
-	parallaxScroll('.how-it-works', '.hw-img2 img');
-	parallaxScroll('.how-it-works', '.hw-img3 img', '-12%');
+	parallaxScroll('.how-it-works', '.hw-img1', '-50%');
+	parallaxScroll('.how-it-works', '.hw-img2');
+	parallaxScroll('.how-it-works', '.hw-img3', '-67%');
 
-	parallaxScroll('.img-section', '.ims-img1 img', '-7%');
-	parallaxScroll('.img-section', '.ims-img2 img', '-12%');
-	parallaxScroll('.img-section', '.ims-img3 img, .ims-img4 img');
+	parallaxScroll('.img-section', '.ims-img1', '-47%');
+	parallaxScroll('.img-section', '.ims-img2', '-62%');
+	parallaxScroll('.img-section', '.ims-img3, .ims-img4');
 }

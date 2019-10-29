@@ -7,6 +7,7 @@
 
   .bg-icons
     z-index: 0
+    transition: transform 0.3s ease-in-out
     .bg-icon1
       width: 1368px
       height: 1368px
@@ -51,6 +52,11 @@
       padding: 0
     &_img
       margin-bottom: 20px
+      height: 176px
+      line-height: 176px
+      img
+        display: inline-block !important
+        vertical-align: middle
     &_title
       margin-bottom: 6px
       *
@@ -58,10 +64,7 @@
 
     &_info
       border-top: 1px solid #000
-      border-bottom: 1px dashed #fff
       padding: 14px 0 26px
-      margin-bottom: 11px
-
 
     &_price
       border-top: 1px solid #000

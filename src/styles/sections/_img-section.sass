@@ -9,6 +9,7 @@
       height: auto
   .bg-icons
     z-index: 0
+    transition: transform 0.5s ease-out
     .bg-icon1
       width: 982px
       height: 982px
@@ -50,31 +51,33 @@
   position: absolute
   overflow: hidden
   img
-    width: 120%
-    height: 120%
     object-fit: cover
-    position: absolute
-    left: -10%
-    top: -10%
-    transition: transform 0.5s ease-out
   &1
-    width: 862px
-    height: 574px
+    &, img
+      width: 862px
+      height: 574px
     bottom: -90px
     right: 90px
+    transition: transform 1s ease-out
 
   &2
-    width: 539px
-    height: 359px
+    &, img
+      width: 539px
+      height: 359px
     top: -54px
     left: 147px
+    transition: transform 0.5s ease-out
   &3
-    width: 411px
-    height: 614px
+    &, img
+      width: 411px
+      height: 614px
     left: -60px
     top: 186px
+    transition: transform 0.7s ease-out
   &4
-    width: 280px
-    height: 402px
+    &, img
+      width: 280px
+      height: 402px
     right: 20px
     bottom: -238px
+    transition: transform 0.4s ease-out
