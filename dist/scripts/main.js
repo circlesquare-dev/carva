@@ -7,7 +7,7 @@ $('.preloader__ico').fadeIn('slow');
 $(window).load(function () {
 	setTimeout(function () {
 		$('.preloader').fadeOut('slow');
-		// readyPage();
+		readyPage();
 	}, 1000);
 });
 
@@ -89,14 +89,26 @@ function addAnimateClass(productAnimate, productCover) {
 
 // Parallax animation end
 
-var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-// let mobDev = false;
+// let mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+var mobDev = false;
 
-// function readyPage() {
-// 	if (!mobDev) {
-// 		animateProducts('.main-cover .fade-up', '.main-cover');
-// 	}
-// }
+function readyPage() {
+	if (!mobDev) {
+		animateProducts('.main-cover .fade-up', '.main-cover', 0, 60, 0, 0, 0.7);
+	}
+}
+
+$(window).on('scroll', function () {
+	$('video').each(function () {
+		if ($(this).is(":in-viewport")) {
+			$(this)[0].play();
+			console.log('play');
+		} else {
+			$(this)[0].pause();
+			console.log('pause');
+		}
+	});
+});
 
 $(document).ready(function () {
 
