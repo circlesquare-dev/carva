@@ -325,5 +325,5 @@ if (!mobDev) {
 
 	parallaxScroll('.img-section', '.img-section .bg-icons', '5%');
 
-	parallaxScroll('.img-section', '.tt-title', '1px', '-700px', '1000', '100%');
+	parallaxScroll('.img-section', '.tt-title', '1px', '-700px', '900', '100%');
 }
