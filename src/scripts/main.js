@@ -133,7 +133,6 @@ $(document).ready( function(){
 		fade: true,
 		dots: true,
 		autoplay: true,
-		speed: 3000,
 		prevArrow: '.pi-prev',
 		nextArrow: '.pi-next',
 		dotsClass: 'slider_dots'
@@ -150,7 +149,7 @@ $(document).ready( function(){
 	});
 	
 	$('.oc-slider').slick({
-		infinite: false,
+		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		prevArrow: '.oc-prev',

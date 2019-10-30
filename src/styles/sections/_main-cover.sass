@@ -3,11 +3,14 @@
   position: relative
   &, .main-row
     height: 100vh
-    min-height: 600px
     max-height: 800px
     @media(max-width: 992px)
       height: auto
       max-height: none
+
+  .main-row
+    @media(max-width: 992px)
+      padding: 60px 0 100px
 
   &_bg-video
     position: absolute
