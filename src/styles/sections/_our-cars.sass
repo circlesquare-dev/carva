@@ -16,6 +16,12 @@
       background: $yellowDark
       opacity: 0.45
       border-radius: 100%
+      @media(max-width: 820px)
+        width: 570px
+        height: 570px
+        left: -442px
+        top: -160px
+        opacity: 0.14
 
 .oc
   &-bg
@@ -27,6 +33,7 @@
     height: calc(100% + 286px)
     margin: -103px -65px 0
     background: $gray
+    display: none
 
   &-title
     padding-right: 20px
@@ -40,26 +47,60 @@
       margin: 0 0 114px
       padding: 0 40px
     @media(max-width: 820px)
+      margin: 0 0 34px
       padding: 0
     &_wrap
       position: relative
+      @media(max-width: 820px)
+        margin: 0 -16px
+        padding-left: 16px
 
   &-slide
-    margin-bottom: 50px
-    padding: 0 45px
+    //margin-bottom: 50px
+    margin: 0 15px
+    padding: 0 30px 50px
+    position: relative
     @media(max-width: 820px)
-      margin-bottom: 0
-      padding: 0
+      opacity: 0.5
+      margin: 0 8px
+      width: 270px
+      padding: 0 18px 18px
+    &:after
+      content: ''
+      position: absolute
+      display: none
+      z-index: 0
+      left: 0
+      bottom: 0
+      height: 80%
+      width: 100%
+      background: $gray
+      border-radius: 6px
+      @media(max-width: 820px)
+        display: block
+
+    &_img, &_title, &_info, &_price
+      position: relative
+      z-index: 1
+      @media(max-width: 820px)
+        text-align: center
+
     &_img
       margin-bottom: 20px
       height: 176px
       line-height: 176px
+      @media(max-width: 820px)
+        height: 150px
+        line-height: 150px
       img
         display: inline-block !important
         vertical-align: middle
         transform: scale(0.95)
         transform-origin: left bottom
         transition: transform 0s 200ms ease-out
+        @media(max-width: 820px)
+          max-width: 100%
+          max-height: 100%
     &_title
       margin-bottom: 6px
       *
@@ -68,6 +109,9 @@
     &_info
       border-top: 1px solid #000
       padding: 14px 0 26px
+      @media(max-width: 820px)
+        padding: 8px 0
+        font-size: 11px
 
     &_price
       border-top: 1px solid #000
@@ -79,6 +123,8 @@
         font-size: 12px
         line-height: 22px
         letter-spacing: 1.21071px
+        @media(max-width: 820px)
+          font-size: 10px
 
       &_type
         background: #000
@@ -89,7 +135,17 @@
         line-height: 16px
         padding: 9px 10px
     &.slick-active
+      @media(max-width: 820px)
+        opacity: 1
       img
         transform: scale(1)
         transition: transform 300ms 400ms ease-out
+  &-btn
+    .btn_black
+      @media(max-width: 820px)
+        width: 100%
+        background: none
+        border: 1px solid $main
+        color: $main
+        padding: 4px 0
 

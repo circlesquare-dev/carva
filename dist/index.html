@@ -7,6 +7,7 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <meta name="theme-color" content="#ffffff">
     <link type="text/css" rel="stylesheet" href="https://uploads-ssl.webflow.com/5db96cdb2067fa483e8a7866/css/carve.webflow.d7f7048df.css">
+    <link type="text/css" rel="stylesheet" href="styles/grid.min.css">
     <link type="text/css" rel="stylesheet" href="styles/styles.min.css">
 </head>
 
@@ -31,16 +32,14 @@
     </div>
     <main>
         <header class="main-header c-height">
-            <div class="b-container-fluid">
-                <div class="main-row row align-items-center">
-                    <div class="col-xl-5 col-8">
-                        <div class="main-header_logo"><a href="#"><img src="images/mainLogo.svg" alt="logo"></a></div>
-                    </div>
-                    <div class="col-xl-6 col-4">
-                        <div class="main-header_menu"><a href="#">Sign up</a><a href="#">Login</a><a href="#">Help</a></div>
-                        <div class="main-header_d-menu">
-                            <div class="hamburger"><span></span><span></span><span></span></div>
-                        </div>
+            <div class="main-row d-flex align-items-center justify-content-between">
+                <div class="col-xl-5 col-8">
+                    <div class="main-header_logo"><a href="#"><img src="images/mainLogo.svg" alt="logo"></a></div>
+                </div>
+                <div class="col-xl-6 col-4">
+                    <div class="main-header_menu"><a href="#">Sign up</a><a href="#">Login</a><a href="#">Help</a></div>
+                    <div class="main-header_d-menu">
+                        <div class="hamburger"><span></span><span></span><span></span></div>
                     </div>
                 </div>
             </div>
@@ -56,20 +55,23 @@
         <section class="main-cover">
             <div class="main-cover_bg-video">
                 <div class="bg-video_wrap">
-                    <div class="bg-video_slider">
-                        <div class="bg-video_slide"><video class="video-bg" muted playsinline preload="auto">
-                                <source src="video/video-1.webm" type="video/webm">
-                                <source src="video/video-1.mp4" type="video/mp4"></video></div>
-                        <div class="bg-video_slide"><video class="video-bg" muted playsinline preload="auto">
-                                <source src="video/video-2.webm" type="video/webm">
-                                <source src="video/video-2.mp4" type="video/mp4"></video></div>
-                        <div class="bg-video_slide"><video class="video-bg" muted playsinline preload="auto">
-                                <source src="video/video-3.webm" type="video/webm">
-                                <source src="video/video-3.mp4" type="video/mp4"></video></div>
-                        <div class="bg-video_slide"><video class="video-bg" muted playsinline preload="auto">
-                                <source src="video/video-4.webm" type="video/webm">
-                                <source src="video/video-4.mp4" type="video/mp4"></video></div>
-                    </div>
+                    <!--.bg-video_slider-->
+                    <!--    .bg-video_slide-->
+                    <!--        video.video-bg(muted playsinline preload="auto")-->
+                    <!--            source(src="video/video-1.webm" type="video/webm")-->
+                    <!--            source(src="video/video-1.mp4" type="video/mp4")-->
+                    <!--    .bg-video_slide-->
+                    <!--        video.video-bg(muted playsinline preload="auto")-->
+                    <!--            source(src="video/video-2.webm" type="video/webm")-->
+                    <!--            source(src="video/video-2.mp4" type="video/mp4")-->
+                    <!--    .bg-video_slide-->
+                    <!--        video.video-bg(muted playsinline  preload="auto")-->
+                    <!--            source(src="video/video-3.webm" type="video/webm")-->
+                    <!--            source(src="video/video-3.mp4" type="video/mp4")-->
+                    <!--    .bg-video_slide-->
+                    <!--        video.video-bg(muted playsinline  preload="auto")-->
+                    <!--            source(src="video/video-4.webm" type="video/webm")-->
+                    <!--            source(src="video/video-4.mp4" type="video/mp4")-->
                 </div>
             </div>
             <div class="b-container-fluid">
@@ -273,7 +275,6 @@
                 <div class="row">
                     <div class="col-lg-7 offset-lg-0 col-md-10 offset-md-1 offset-0">
                         <div class="oc-title">
-                            <p class="sub-title fade-up">Detail</p>
                             <h2 class="h-title fade-up">Our Cars</h2>
                             <p class="title-info fade-up">We partner with dealerships to rent out cars that would otherwise just sit on the lot, which
                                 means you get the coolest cars at the best prices.</p>

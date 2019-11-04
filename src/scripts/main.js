@@ -47,12 +47,12 @@ function animateProducts(productAnimate, productCover, xAnimation = 0, yAnimatio
 	new ScrollMagic.Scene({
 		triggerElement: section,
 		offset: topOffset,
-		reverse: false
+		reverse: true
 	}).setTween(tl).addTo(controller);
 
 }
 
-function addAnimateClass(productAnimate, productCover, classItem = 'k-animate', offsetTop = 300, durItem = 0.5, delayItem = 0.15) {
+function addAnimateClass(productAnimate, productCover, classItem = 'k-animate', repeatAnimation = false, offsetTop = 300, durItem = 0.5, delayItem = 0.15) {
 	
 	var productItem = productAnimate;
 	var section = productCover;
@@ -74,7 +74,7 @@ function addAnimateClass(productAnimate, productCover, classItem = 'k-animate', 
 	new ScrollMagic.Scene({
 		triggerElement: section,
 		offset: offsetTop,
-		reverse: false
+		reverse: repeatAnimation
 	}).setTween(tl).addTo(controller);
 	
 }
@@ -152,6 +152,7 @@ $(document).ready( function(){
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
+		// autoplay: true,
 		prevArrow: '.oc-prev',
 		nextArrow: '.oc-next',
 		dotsClass: 'slider_dots',
@@ -166,10 +167,11 @@ $(document).ready( function(){
 				}
 			},
 			{
-				breakpoint: 992,
+				breakpoint: 820,
 				settings: {
 					slidesToShow: 1,
-					dots: true,
+					centerPadding: '40px',
+					variableWidth: true,
 				}
 			}
 		]
@@ -222,18 +224,18 @@ $(document).ready( function(){
 	if (!mobDev) {
 	// Bg circles Animation start
 	
-		animateProducts('.partners .bg-icons', '.partners', 0, 10, 1);
-		animateProducts('.how-it-works .bg-icons', '.how-it-works', 0, 30, 1);
-		animateProducts('.our-cars .bg-icons', '.our-cars', 0, 40, 1, -200);
+		// animateProducts('.partners .bg-icons', '.partners', 0, 10, 1);
+		// animateProducts('.how-it-works .bg-icons', '.how-it-works', 0, 30, 1);
+		// animateProducts('.our-cars .bg-icons', '.our-cars', 0, 40, 1, -200);
 		
 	// Bg circles Animation end
 	
-		animateProducts('.partner_img .k-img', '.partners');
-		animateProducts('.how-it-works .fade-up', '.how-it-works');
-		animateProducts('.platform-info .fade-up', '.platform-info');
-		animateProducts('.our-cars .fade-up', '.our-cars');
+		// animateProducts('.partner_img .k-img', '.partners');
+		// animateProducts('.how-it-works .fade-up', '.how-it-works');
+		// animateProducts('.platform-info .fade-up', '.platform-info');
+		// animateProducts('.our-cars .fade-up', '.our-cars');
 		animateProducts('.testimonials .fade-up', '.testimonials');
-		animateProducts('.testimonials .tt-info', '.testimonials-items');
+		animateProducts('.testimonials .tt-info', '.testimonials-items', '0', 60, 0, 300, 0.7);
 	
 	// animation for images start
 	
@@ -245,7 +247,10 @@ $(document).ready( function(){
 		addAnimateClass('.ims-img2 .k-norm', '.ims-img2');
 		addAnimateClass('.ims-img3 .k-norm', '.ims-img3');
 		addAnimateClass('.ims-img4 .k-norm', '.ims-img4');
-	
+		
+		
+		addAnimateClass('.testimonials', '.testimonials', 'focusIn', true, '800');
+		
 	// animation for images end
 
 	} else {
