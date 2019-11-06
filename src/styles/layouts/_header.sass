@@ -6,6 +6,7 @@
   z-index: 6
   background: $yellow
   padding: 0 144px 0 113px
+  transition: background 300ms ease-out
   @media(max-width: 1280px)
     padding: 0 60px
   @media(max-width: 992px)
@@ -74,6 +75,18 @@
           border-color: $gray
           color: $gray
 
+  &.active
+    background: #F5F0EE
+    .hamburger
+      span
+        &:first-child
+          transform: rotate(45deg) translate(7px, 7px)
+        &:nth-child(2)
+          opacity: 0
+        &:last-child
+          transform: rotate(-45deg) translate(3px, -3px)
+
+
   &_d-menu
     display: none
     text-align: right
@@ -105,7 +118,7 @@
   top: 0
   width: 300px
   height: 100vh
-  background: $yellow
+  background: #F5F0EE
   padding: 120px 40px
   box-shadow: 0 10px 20px rgba($gray, 0)
   opacity: 0
@@ -129,13 +142,20 @@
     li
       text-align: left
       display: block
-      margin-bottom: 25px
+      margin-bottom: 30px
+      padding-bottom: 27px
+      border-bottom: 1px solid $main
+      &:last-child
+        padding: 0
+        margin: 0
+        border: none
       @media(max-width: 400px)
         text-align: center
       a
         display: inline-block
-        font-family: $f-main
-        text-transform: uppercase
+        font-family: $f-title
+        font-size: 24px
+        line-height: 32px
         text-decoration: none
         padding: 0 5px
         color: $main
@@ -145,14 +165,3 @@
         &.active
           pointer-events: none
           background: $yellow
-
-.main-header_d-menu
-  &.active
-    .hamburger
-      span
-        &:first-child
-          transform: rotate(45deg) translate(7px, 7px)
-        &:nth-child(2)
-          opacity: 0
-        &:last-child
-          transform: rotate(-45deg) translate(3px, -3px)

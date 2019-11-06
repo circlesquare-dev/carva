@@ -2,8 +2,6 @@ let gulp = require('gulp'),
 		plumber = require('gulp-plumber'),
 		rename = require('gulp-rename'),
 		pug = require('gulp-pug'),
-		// csscomb = require('gulp-csscomb'),
-		// autoprefixer = require('gulp-autoprefixer'),
 		babel = require('gulp-babel'),
 		concat = require('gulp-concat'),
 		uglify = require('gulp-uglify'),
@@ -14,20 +12,19 @@ let gulp = require('gulp'),
 		autoprefix = require('autoprefixer'),
 		cssnano = require('cssnano'),
 		sorting = require('postcss-sorting'),
-		// minifycss = require('gulp-minify-css'),
 		sass = require('gulp-sass'),
 		browserSync = require('browser-sync');
 
 gulp.task('browser-sync', function () {
 	browserSync({
+		reloadDelay: 1000,
+		scrollProportionally: false,
+		open: false,
+		ui: false,
 		server: {
 			baseDir: "dist/"
 		}
 	});
-});
-
-gulp.task('bs-reload', function () {
-	browserSync.reload();
 });
 
 gulp.task('images', function () {
@@ -100,5 +97,4 @@ gulp.task('default', ['browser-sync'], function () {
 	gulp.watch("src/images/**/*", ['images']);
 	gulp.watch("src/styles/**/*.sass", ['styles']);
 	gulp.watch("src/scripts/**/*.js", ['scripts']);
-	gulp.watch("*.html", ['bs-reload']);
 });

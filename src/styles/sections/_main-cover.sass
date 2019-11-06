@@ -1,5 +1,5 @@
 .main-cover
-  background: #FFE170
+  background: $yellow
   position: relative
   @media(max-width: 820px)
     padding: 60px 0 90px
@@ -57,6 +57,8 @@
       display: block
       margin-bottom: 31px
       @media(max-width: 820px)
+        flex: 0 0 100%
+        max-width: 100%
         font-size: 16px
         line-height: 32px
         order: 2
@@ -73,14 +75,17 @@
     max-width: min-content
     @media(max-width: 992px)
       position: relative
-      max-width: 100%
+      max-width: 70%
+      margin: 0 auto
       display: flex
       flex-wrap: wrap
     @media(max-width: 820px)
       background: $yellow
       padding: 10px 10px 12px
-      margin: 0 10px
       bottom: 0
+    @media(max-width: 767px)
+      max-width: 100%
+      margin: 0 10px
 
   &_title
     padding: 47px 30px 20px
@@ -170,6 +175,7 @@
       content: ''
       position: absolute
       right: 0
+      pointer-events: none
       top: 0
       width: 15px
       height: 100%
@@ -181,23 +187,56 @@
       max-width: 100px
       flex: 0 1 100px
       @media(max-width: 820px)
+        max-width: 120px
+        flex: 0 1 120px
         margin-right: 75px
+      @media(max-width: 576px)
+        max-width: 145px
+        flex: 0 1 145px
+        margin-right: 40px
+
     &_time
       max-width: 70px
       flex: 0 1 70px
+      @media(max-width: 820px)
+        max-width: 90px
+        flex: 0 1 90px
     &:last-child
       margin-right: 0
     input
       width: 100%
       border: none
       cursor: pointer
-      color: #8E8E8E
-      padding-right: 15px
+      -webkit-appearance: textfield
+      padding-right: 10px
       background: #F5F0EE
+      color: transparent
+      &:invalid
+        &:before
+          color: #8E8E8E
+          content: attr(placeholder)
+          pointer-events: none
+          position: absolute
+          left: 0
+
+      &:valid,
+      &:focus,
+      &:active
+        color: #8E8E8E
+        &:before
+          display: none
       &::placeholder
         @media(max-width: 820px)
           color: $main
 
       @media(max-width: 820px)
         background-color: $yellow
-        color: $main
+        color: transparent
+        height: 32px
+        &:invalid
+          &:before
+            color: $main
+        &:valid,
+        &:focus,
+        &:active
+          color: $main

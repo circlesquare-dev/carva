@@ -55,28 +55,25 @@
         <section class="main-cover">
             <div class="main-cover_bg-video">
                 <div class="bg-video_wrap">
-                    <!--.bg-video_slider-->
-                    <!--    .bg-video_slide-->
-                    <!--        video.video-bg(muted playsinline preload="auto")-->
-                    <!--            source(src="video/video-1.webm" type="video/webm")-->
-                    <!--            source(src="video/video-1.mp4" type="video/mp4")-->
-                    <!--    .bg-video_slide-->
-                    <!--        video.video-bg(muted playsinline preload="auto")-->
-                    <!--            source(src="video/video-2.webm" type="video/webm")-->
-                    <!--            source(src="video/video-2.mp4" type="video/mp4")-->
-                    <!--    .bg-video_slide-->
-                    <!--        video.video-bg(muted playsinline  preload="auto")-->
-                    <!--            source(src="video/video-3.webm" type="video/webm")-->
-                    <!--            source(src="video/video-3.mp4" type="video/mp4")-->
-                    <!--    .bg-video_slide-->
-                    <!--        video.video-bg(muted playsinline  preload="auto")-->
-                    <!--            source(src="video/video-4.webm" type="video/webm")-->
-                    <!--            source(src="video/video-4.mp4" type="video/mp4")-->
+                    <div class="bg-video_slider">
+                        <div class="bg-video_slide"><video class="video-bg" muted playsinline preload="auto">
+                                <source src="video/video-1.webm" type="video/webm">
+                                <source src="video/video-1.mp4" type="video/mp4"></video></div>
+                        <div class="bg-video_slide"><video class="video-bg" muted playsinline preload="auto">
+                                <source src="video/video-2.webm" type="video/webm">
+                                <source src="video/video-2.mp4" type="video/mp4"></video></div>
+                        <div class="bg-video_slide"><video class="video-bg" muted playsinline preload="auto">
+                                <source src="video/video-3.webm" type="video/webm">
+                                <source src="video/video-3.mp4" type="video/mp4"></video></div>
+                        <div class="bg-video_slide"><video class="video-bg" muted playsinline preload="auto">
+                                <source src="video/video-4.webm" type="video/webm">
+                                <source src="video/video-4.mp4" type="video/mp4"></video></div>
+                    </div>
                 </div>
             </div>
             <div class="b-container-fluid">
                 <div class="main-row row align-items-center">
-                    <div class="col-lg-6 offset-md-1 col-12 offset-0">
+                    <div class="col-lg-6 offset-lg-1 col-12 offset-0">
                         <div class="main-cover_title">
                             <p class="sub-title fade-up">Welcome to Carve</p>
                             <h1 class="h1-title fade-up">Adventure is waiting</h1>
@@ -84,36 +81,41 @@
                     </div>
                 </div>
             </div>
-            <div class="mc_form fade-up">
+            <form class="mc_form fade-up">
                 <div class="mc_title">
                     <h6>Get Started</h6>
                 </div>
                 <div class="mc_section">
-                    <h6>Pickup</h6>
-                    <div class="mc_select mc_select_date"><input class="pickup_data" type="text" placeholder="Date"></div>
-                    <div class="mc_select mc_select_time"><input class="pickup_time" type="text" placeholder="Time"></div>
+                    <h6>Pickup 1</h6>
+                    <div class="mc_select mc_select_date"><input class="input_picker pickup_data" type="date" placeholder="Date" data-target=".pickup_data" required></div>
+                    <div class="mc_select mc_select_time"><input class="input_picker pickup_time" type="time" min="09:00" placeholder="Time" data-target=".pickup_time" required></div>
                 </div>
                 <div class="mc_section">
                     <h6>Dropoff</h6>
-                    <div class="mc_select mc_select_date"><input class="dropoff_data" type="text" placeholder="Date"></div>
-                    <div class="mc_select mc_select_time"><input class="dropoff_time" type="text" placeholder="Time"></div>
+                    <div class="mc_select mc_select_date"><input class="input_picker dropoff_data" type="date" placeholder="Date" data-target=".dropoff_data" required></div>
+                    <div class="mc_select mc_select_time"><input class="input_picker dropoff_time" type="time" min="09:00" placeholder="Time" data-target=".dropoff_time" required></div>
                 </div>
                 <div class="mc_btn"><button>Search</button></div>
-            </div>
+            </form>
         </section>
         <section class="partners">
             <div class="bg-icons">
                 <div class="bg-icon bg-icon1"></div>
             </div>
             <div class="b-container">
-                <div class="row justify-content-lg-between justify-content-around align-items-center">
-                    <div class="col-lg-3 col-md-6 partner_img">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="h-title">FEATURED BY</h5>
+                    </div>
+                </div>
+                <div class="partners_slider">
+                    <div class="partner_img">
                         <div class="k-img"><img src="images/partner1.svg" alt=""></div>
                     </div>
-                    <div class="col-lg-3 col-md-6 partner_img">
+                    <div class="partner_img">
                         <div class="k-img"><img src="images/partner2.svg" alt=""></div>
                     </div>
-                    <div class="col-lg-3 col-md-6 partner_img">
+                    <div class="partner_img">
                         <div class="k-img"><img src="images/partner3.svg" alt=""></div>
                     </div>
                 </div>
@@ -124,8 +126,8 @@
                 <div class="bg-icon bg-icon1"></div>
             </div>
             <div class="b-container-fluid">
-                <div class="row">
-                    <div class="col-xl-5 col-lg-8 order-xl-2 order-1">
+                <div class="row justify-content-center justify-content-lg-between">
+                    <div class="col-xl-5 col-lg-12 col-md-12 order-xl-2 order-1">
                         <div class="hw-title">
                             <h2 class="h-title fade-up">How it works</h2>
                         </div>
@@ -147,7 +149,7 @@
                             </div><a class="btn_black" href="#">Sign up</a>
                         </div>
                     </div>
-                    <div class="col-xl-7 col-lg-12 order-xl-1 order-2">
+                    <div class="col-xl-7 col-lg-10 col-md-10 col-12 order-xl-1 order-2">
                         <ul class="hw-list">
                             <li class="fade-up">
                                 <div class="hw-list_num">
@@ -445,18 +447,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="ims-items_slider-wrap">
-                            <ul class="ims-items_slider">
-                                <li><img src="images/b-img1.jpg" srcset="images/b-img1@2x.jpg 2x" alt=""></li>
-                                <li><img src="images/b-img2.jpg" srcset="images/b-img2@2x.jpg 2x" alt=""></li>
-                                <li><img src="images/b-img3.jpg" srcset="images/b-img3@2x.jpg 2x" alt=""></li>
-                                <li><img src="images/b-img4.jpg" srcset="images/b-img4@2x.jpg 2x" alt=""></li>
-                            </ul>
-                            <div class="slider_nav">
-                                <div class="ims-item-prev slider_nav-prev"><img src="images/arrow.svg" alt=""></div>
-                                <div class="ims-item-next slider_nav-next"><img src="images/arrow-n.svg" alt=""></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -465,52 +455,85 @@
             <div class="b-container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-9 col-12">
-                        <div class="tt-title">
-                            <h2 class="h-title text-c">The future of car ownership</h2>
-                            <p class="sub-title text-c">The journey is the destination</p>
+                        <div class="tt-title_wrap">
+                            <div class="tt-title_parallax">
+                                <div class="tt-title">
+                                    <h2 class="h-title text-c">The future of car ownership</h2>
+                                    <p class="sub-title text-c">The journey is the destination</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 testimonials-items">
-                        <div class="row justify-content-md-between justify-content-center">
-                            <div class="col-lg-3 col-md-4 col-11">
-                                <div class="tt-info">
-                                    <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
-                                    <p>Name and profession</p>
+                        <div class="tt-items">
+                            <div class="tt-info">
+                                <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
+                                <p class="tt-web_info">Name and profession</p>
+                                <div class="tt-mob_info">
+                                    <div class="tt-mob_img"><img src="images/icon.svg"></div>
+                                    <div class="tt-mob_text">
+                                        <p>Lassy Chester</p>
+                                        <p>Art Director</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-11">
-                                <div class="tt-info">
-                                    <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
-                                    <p>Name and profession</p>
+                            <div class="tt-info">
+                                <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
+                                <p class="tt-web_info">Name and profession</p>
+                                <div class="tt-mob_info">
+                                    <div class="tt-mob_img"><img src="images/icon.svg"></div>
+                                    <div class="tt-mob_text">
+                                        <p>Lassy Chester</p>
+                                        <p>Art Director</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-11">
-                                <div class="tt-info">
-                                    <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
-                                    <p>Name and profession</p>
+                            <div class="tt-info">
+                                <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
+                                <p class="tt-web_info">Name and profession</p>
+                                <div class="tt-mob_info">
+                                    <div class="tt-mob_img"><img src="images/icon.svg"></div>
+                                    <div class="tt-mob_text">
+                                        <p>Lassy Chester</p>
+                                        <p>Art Director</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tt-info">
+                                <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
+                                <p class="tt-web_info">Name and profession</p>
+                                <div class="tt-mob_info">
+                                    <div class="tt-mob_img"><img src="images/icon.svg"></div>
+                                    <div class="tt-mob_text">
+                                        <p>Lassy Chester</p>
+                                        <p>Art Director</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tt-info">
+                                <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
+                                <p class="tt-web_info">Name and profession</p>
+                                <div class="tt-mob_info">
+                                    <div class="tt-mob_img"><img src="images/icon.svg"></div>
+                                    <div class="tt-mob_text">
+                                        <p>Lassy Chester</p>
+                                        <p>Art Director</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tt-info">
+                                <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
+                                <p class="tt-web_info">Name and profession</p>
+                                <div class="tt-mob_info">
+                                    <div class="tt-mob_img"><img src="images/icon.svg"></div>
+                                    <div class="tt-mob_text">
+                                        <p>Lassy Chester</p>
+                                        <p>Art Director</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-md-between justify-content-center">
-                            <div class="col-lg-3 col-md-4 col-11">
-                                <div class="tt-info">
-                                    <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
-                                    <p>Name and profession</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-11">
-                                <div class="tt-info">
-                                    <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
-                                    <p>Name and profession</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-11">
-                                <div class="tt-info">
-                                    <h5 class="h-title">It’s about time there’s a car service I can actually rely on</h5>
-                                    <p>Name and profession</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="tt-btn"><a class="btn_black" href="#">Get started</a></div>
                     </div>
                 </div>
             </div>
@@ -518,24 +541,25 @@
         <footer class="footer">
             <div class="b-container">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-md-5 col-12 order-md-1 order-2">
+                    <div class="col-lg-5 col-12 order-lg-1 order-2">
                         <div class="social-icons"><a href="#"><img src="images/twitter.svg" alt="twitter"></a><a href="#"><img src="images/instagram.svg" alt="instagram"></a><a href="#"><img src="images/fb.svg" alt="facebook"></a></div>
                     </div>
-                    <div class="col-md-2 col-12 text-c order-md-2 order-1"><a class="footer-logo" href="#"><img src="images/logo.svg" alt="logo"></a></div>
-                    <div class="col-md-5 col-12 order-3 text-c">
+                    <div class="col-lg-2 col-12 text-c order-lg-2 order-1"><a class="footer-logo" href="#"><img src="images/logo.svg" alt="logo"></a></div>
+                    <div class="col-lg-5 col-12 order-3 text-c">
                         <div class="footer_links"><a href="#">Contact</a><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Help</a></div>
                     </div>
                 </div>
             </div>
         </footer>
     </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+    <script src="scripts/isInViewport.js"></script>
     <script src="scripts/slick.min.js"></script>
-    <!--script(src='scripts/isInViewport.js')-->
-    <script src="scripts/jquery.datetimepicker.full.min.js"></script>
+    <script src="scripts/moment.min.js"></script>
+    <script src="scripts/tempusdominus-bootstrap-4.js"></script>
     <script src="scripts/main.min.js"></script>
 </body>
 

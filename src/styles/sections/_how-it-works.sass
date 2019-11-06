@@ -5,7 +5,9 @@
   @media(max-width: 1024px)
     padding-bottom: 80px
   @media(max-width: 820px)
+    background: #fff
     padding-bottom: 0
+    text-align: center
   &:after
     content: ''
     position: absolute
@@ -16,6 +18,8 @@
     height: 60%
     margin: 0 -16px
     background: #fff
+    @media(max-width: 820px)
+      display: none
 
   .row
     position: relative
@@ -31,12 +35,22 @@
       background: $red
       opacity: 0.45
       border-radius: 100%
+      @media(max-width: 820px)
+        background: $orange
+        opacity: 0.08
+        top: 0
+        right: auto
+        left: 71px
 
 .hw
   &-title
     padding-left: 70px
-    @media(max-width: 576px)
-      padding-left: 0
+    @media(max-width: 1024px)
+      text-align: center
+    @media(max-width: 820px)
+      text-align: center
+      margin-top: -44px
+      padding: 0 50px
 
   &-list
     background: #fff
@@ -44,21 +58,27 @@
     margin: 64px -16px 0
     list-style: none
     @media(max-width: 1024px)
-      margin: 64px -16px 0
       padding: 105px 70px 0
     @media(max-width: 820px)
-      padding: 105px 30px 30px
+      background: none
+      margin: 20px -16px 0
+      padding: 0
 
     li
       border-top: 1px solid $gray
       padding: 80px 5px 80px 30px
       display: flex
       align-items: center
+      @media(max-width: 820px)
+        padding: 0 40px 30px
+        margin-bottom: 17px
+        flex-wrap: wrap
+        border-bottom: 1px solid $gray
+        border-top: none
       &:last-child
         border-bottom: 1px solid $gray
-      @media(max-width: 820px)
-        padding: 50px 0
-        flex-wrap: wrap
+        @media(max-width: 820px)
+          margin-bottom: 0
 
     &_num
       font-family: $f-title

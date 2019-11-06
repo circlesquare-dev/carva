@@ -33,11 +33,15 @@
     height: calc(100% + 286px)
     margin: -103px -65px 0
     background: $gray
-    display: none
+    @media(max-width: 820px)
+      display: none
 
   &-title
     padding-right: 20px
     margin-bottom: 72px
+    @media(max-width: 820px)
+      text-align: center
+      padding-right: 0
     .h-title
       margin-bottom: 26px
 
@@ -61,6 +65,7 @@
     padding: 0 30px 50px
     position: relative
     @media(max-width: 820px)
+      transition: opacity 300ms ease-out
       opacity: 0.5
       margin: 0 8px
       width: 270px
