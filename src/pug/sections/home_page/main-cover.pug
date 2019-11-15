@@ -1,23 +1,25 @@
+- var timeVal = ['12:00', '12:30', '01:00', '01:30', '02:00', '02:30', '03:00', '03:30','04:00','04:30','05:00','05:30','06:00','06:30','07:00','07:30','08:00','08:30','09:00','09:30','10:00','10:30','11:00','11:30']
+
 section.main-cover
     .main-cover_bg-video
-        .bg-video_wrap
-            .bg-video_slider
-                .bg-video_slide
-                    video.video-bg(muted playsinline preload="auto")
-                        source(src="video/video-1.webm" type="video/webm")
-                        source(src="video/video-1.mp4" type="video/mp4")
-                .bg-video_slide
-                    video.video-bg(muted playsinline preload="auto")
-                        source(src="video/video-2.webm" type="video/webm")
-                        source(src="video/video-2.mp4" type="video/mp4")
-                .bg-video_slide
-                    video.video-bg(muted playsinline  preload="auto")
-                        source(src="video/video-3.webm" type="video/webm")
-                        source(src="video/video-3.mp4" type="video/mp4")
-                .bg-video_slide
-                    video.video-bg(muted playsinline  preload="auto")
-                        source(src="video/video-4.webm" type="video/webm")
-                        source(src="video/video-4.mp4" type="video/mp4")
+        //.bg-video_wrap
+        //    .bg-video_slider
+        //        .bg-video_slide
+        //            video.video-bg(muted playsinline preload="auto")
+        //                source(src="video/video-1.webm" type="video/webm")
+        //                source(src="video/video-1.mp4" type="video/mp4")
+        //        .bg-video_slide
+        //            video.video-bg(muted playsinline preload="auto")
+        //                source(src="video/video-2.webm" type="video/webm")
+        //                source(src="video/video-2.mp4" type="video/mp4")
+        //        .bg-video_slide
+        //            video.video-bg(muted playsinline  preload="auto")
+        //                source(src="video/video-3.webm" type="video/webm")
+        //                source(src="video/video-3.mp4" type="video/mp4")
+        //        .bg-video_slide
+        //            video.video-bg(muted playsinline  preload="auto")
+        //                source(src="video/video-4.webm" type="video/webm")
+        //                source(src="video/video-4.mp4" type="video/mp4")
     .b-container-fluid
         .main-row.row.align-items-center
             .col-lg-6.offset-lg-1.col-12.offset-0
@@ -28,20 +30,28 @@ section.main-cover
         .mc_title
             h6 Get Started
         .mc_section
-            h6 Pickup 1
+            h6 Pickup
             .mc_select.mc_select_date
-                input.input_picker.pickup_data(type='date' placeholder='Date'
+                input.input_picker.pickup_data.data-picker(type='date' placeholder='Date'
                 data-target=".pickup_data" required)
             .mc_select.mc_select_time
-                input.input_picker.pickup_time(type='time' min="09:00" placeholder='Time'
-                data-target=".pickup_time" required)
+                select.input_picker.pickup_time
+                    option(checked disable value='Time') Time
+                    each val in timeVal
+                        option(value= val + ' AM')= val + ' AM'
+                    each val in timeVal
+                        option(value= val + ' PM')= val + ' PM'
         .mc_section
             h6 Dropoff
             .mc_select.mc_select_date
-                input.input_picker.dropoff_data(type='date' placeholder='Date'
+                input.input_picker.dropoff_data.data-picker(type='date' placeholder='Date'
                 data-target=".dropoff_data"  required)
             .mc_select.mc_select_time
-                input.input_picker.dropoff_time(type='time' min="09:00" placeholder='Time'
-                data-target=".dropoff_time"  required)
+                select.input_picker.dropoff_time
+                    option(checked disable value='Time') Time
+                    each val in timeVal
+                        option(value= val + ' AM')= val + ' AM'
+                    each val in timeVal
+                        option(value= val + ' PM')= val + ' PM'
         .mc_btn
             button Search

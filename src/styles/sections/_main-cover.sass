@@ -203,7 +203,7 @@
         flex: 0 1 90px
     &:last-child
       margin-right: 0
-    input
+    input, select
       width: 100%
       border: none
       cursor: pointer
@@ -240,3 +240,9 @@
         &:focus,
         &:active
           color: $main
+
+    select
+      -webkit-appearance: none
+      -moz-appearance: none
+      &::-ms-expand
+        display: none

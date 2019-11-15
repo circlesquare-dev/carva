@@ -24,6 +24,8 @@
     z-index: 2
     line-height: 0
     a
+      display: inline-block
+      line-height: 0
       text-decoration: none
 
     img, svg
@@ -76,15 +78,15 @@
           color: $gray
 
   &.active
-    background: #F5F0EE
+    background: $yellow
     .hamburger
       span
         &:first-child
-          transform: rotate(45deg) translate(7px, 7px)
+          transform: rotate(45deg) translate(6px, 6px)
         &:nth-child(2)
           opacity: 0
         &:last-child
-          transform: rotate(-45deg) translate(3px, -3px)
+          transform: rotate(-45deg) translate(4px, -4px)
 
 
   &_d-menu
@@ -118,7 +120,7 @@
   top: 0
   width: 300px
   height: 100vh
-  background: #F5F0EE
+  background: $yellow
   padding: 120px 40px
   box-shadow: 0 10px 20px rgba($gray, 0)
   opacity: 0
@@ -127,7 +129,7 @@
   @media(min-width: 820px)
     display: none
 
-  @media(max-width: 400px)
+  @media(max-width: 576px)
     width: 100%
     height: auto
   &.active
@@ -149,7 +151,7 @@
         padding: 0
         margin: 0
         border: none
-      @media(max-width: 400px)
+      @media(max-width: 576px)
         text-align: center
       a
         display: inline-block

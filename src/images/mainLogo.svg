@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 533.4 226.8" style="enable-background:new 0 0 533.4 226.8;" xml:space="preserve">
+	 viewBox="0 0 533.4 212.8" style="enable-background:new 0 0 533.4 226.8;" xml:space="preserve">
 <style type="text/css">
 	._x005B_Default_x005D_{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
 	.st0{clip-path:url(#SVGID_2_);fill:url(#SVGID_3_);}
@@ -21,7 +21,7 @@
 		<clipPath id="SVGID_2_">
 			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 		</clipPath>
-		
+
 			<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="0.9042" y1="1077.2206" x2="1.9042" y2="1077.2206" gradientTransform="matrix(-220.5844 246.7062 246.7062 220.5844 -265336.7188 -237874.125)">
 			<stop  offset="0" style="stop-color:#F05752"/>
 			<stop  offset="0.16" style="stop-color:#F0554F"/>
@@ -39,7 +39,7 @@
 		<clipPath id="SVGID_5_">
 			<use xlink:href="#SVGID_4_"  style="overflow:visible;"/>
 		</clipPath>
-		
+
 			<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="-1443.8938" y1="4774.3555" x2="-1442.8938" y2="4774.3555" gradientTransform="matrix(0.1713 -0.1713 -0.1713 -0.1713 1170.5062 633.6666)">
 			<stop  offset="0" style="stop-color:#F9CC21"/>
 			<stop  offset="8.037001e-02" style="stop-color:#F7B022"/>
@@ -61,7 +61,7 @@
 		<clipPath id="SVGID_8_">
 			<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
 		</clipPath>
-		
+
 			<linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="-3.3482" y1="1088.6902" x2="-2.3482" y2="1088.6902" gradientTransform="matrix(73.86 -73.86 -73.86 -73.86 80682.1719 80337.3906)">
 			<stop  offset="0" style="stop-color:#F9CC21"/>
 			<stop  offset="8.037001e-02" style="stop-color:#F7B022"/>
@@ -99,7 +99,5 @@
 			c-2.7,1.2-5.5,2.4-8.6,2.5c-5.7,0.2-10.1-2.2-12.3-8.3c0.3,0,0.6,0,0.9,0C499,110.6,507.7,110.7,516.5,110.6 M489.2,102.7
 			c0-3.6,4.4-6.6,9.9-6.6c5.5,0,9.9,2.9,9.9,6.6H489.2z"/>
 	</g>
-</g>
-<g id="Layer_2">
 </g>
 </svg>

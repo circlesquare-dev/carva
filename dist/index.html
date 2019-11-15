@@ -54,22 +54,24 @@
         </header>
         <section class="main-cover">
             <div class="main-cover_bg-video">
-                <div class="bg-video_wrap">
-                    <div class="bg-video_slider">
-                        <div class="bg-video_slide"><video class="video-bg" muted playsinline preload="auto">
-                                <source src="video/video-1.webm" type="video/webm">
-                                <source src="video/video-1.mp4" type="video/mp4"></video></div>
-                        <div class="bg-video_slide"><video class="video-bg" muted playsinline preload="auto">
-                                <source src="video/video-2.webm" type="video/webm">
-                                <source src="video/video-2.mp4" type="video/mp4"></video></div>
-                        <div class="bg-video_slide"><video class="video-bg" muted playsinline preload="auto">
-                                <source src="video/video-3.webm" type="video/webm">
-                                <source src="video/video-3.mp4" type="video/mp4"></video></div>
-                        <div class="bg-video_slide"><video class="video-bg" muted playsinline preload="auto">
-                                <source src="video/video-4.webm" type="video/webm">
-                                <source src="video/video-4.mp4" type="video/mp4"></video></div>
-                    </div>
-                </div>
+                <!--.bg-video_wrap-->
+                <!--    .bg-video_slider-->
+                <!--        .bg-video_slide-->
+                <!--            video.video-bg(muted playsinline preload="auto")-->
+                <!--                source(src="video/video-1.webm" type="video/webm")-->
+                <!--                source(src="video/video-1.mp4" type="video/mp4")-->
+                <!--        .bg-video_slide-->
+                <!--            video.video-bg(muted playsinline preload="auto")-->
+                <!--                source(src="video/video-2.webm" type="video/webm")-->
+                <!--                source(src="video/video-2.mp4" type="video/mp4")-->
+                <!--        .bg-video_slide-->
+                <!--            video.video-bg(muted playsinline  preload="auto")-->
+                <!--                source(src="video/video-3.webm" type="video/webm")-->
+                <!--                source(src="video/video-3.mp4" type="video/mp4")-->
+                <!--        .bg-video_slide-->
+                <!--            video.video-bg(muted playsinline  preload="auto")-->
+                <!--                source(src="video/video-4.webm" type="video/webm")-->
+                <!--                source(src="video/video-4.mp4" type="video/mp4")-->
             </div>
             <div class="b-container-fluid">
                 <div class="main-row row align-items-center">
@@ -86,14 +88,114 @@
                     <h6>Get Started</h6>
                 </div>
                 <div class="mc_section">
-                    <h6>Pickup 1</h6>
-                    <div class="mc_select mc_select_date"><input class="input_picker pickup_data" type="date" placeholder="Date" data-target=".pickup_data" required></div>
-                    <div class="mc_select mc_select_time"><input class="input_picker pickup_time" type="time" min="09:00" placeholder="Time" data-target=".pickup_time" required></div>
+                    <h6>Pickup</h6>
+                    <div class="mc_select mc_select_date"><input class="input_picker pickup_data data-picker" type="date" placeholder="Date" data-target=".pickup_data" required></div>
+                    <div class="mc_select mc_select_time"><select class="input_picker pickup_time">
+                            <option checked disable value="Time">Time</option>
+                            <option value="12:00 AM">12:00 AM</option>
+                            <option value="12:30 AM">12:30 AM</option>
+                            <option value="01:00 AM">01:00 AM</option>
+                            <option value="01:30 AM">01:30 AM</option>
+                            <option value="02:00 AM">02:00 AM</option>
+                            <option value="02:30 AM">02:30 AM</option>
+                            <option value="03:00 AM">03:00 AM</option>
+                            <option value="03:30 AM">03:30 AM</option>
+                            <option value="04:00 AM">04:00 AM</option>
+                            <option value="04:30 AM">04:30 AM</option>
+                            <option value="05:00 AM">05:00 AM</option>
+                            <option value="05:30 AM">05:30 AM</option>
+                            <option value="06:00 AM">06:00 AM</option>
+                            <option value="06:30 AM">06:30 AM</option>
+                            <option value="07:00 AM">07:00 AM</option>
+                            <option value="07:30 AM">07:30 AM</option>
+                            <option value="08:00 AM">08:00 AM</option>
+                            <option value="08:30 AM">08:30 AM</option>
+                            <option value="09:00 AM">09:00 AM</option>
+                            <option value="09:30 AM">09:30 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="10:30 AM">10:30 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="11:30 AM">11:30 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="12:30 PM">12:30 PM</option>
+                            <option value="01:00 PM">01:00 PM</option>
+                            <option value="01:30 PM">01:30 PM</option>
+                            <option value="02:00 PM">02:00 PM</option>
+                            <option value="02:30 PM">02:30 PM</option>
+                            <option value="03:00 PM">03:00 PM</option>
+                            <option value="03:30 PM">03:30 PM</option>
+                            <option value="04:00 PM">04:00 PM</option>
+                            <option value="04:30 PM">04:30 PM</option>
+                            <option value="05:00 PM">05:00 PM</option>
+                            <option value="05:30 PM">05:30 PM</option>
+                            <option value="06:00 PM">06:00 PM</option>
+                            <option value="06:30 PM">06:30 PM</option>
+                            <option value="07:00 PM">07:00 PM</option>
+                            <option value="07:30 PM">07:30 PM</option>
+                            <option value="08:00 PM">08:00 PM</option>
+                            <option value="08:30 PM">08:30 PM</option>
+                            <option value="09:00 PM">09:00 PM</option>
+                            <option value="09:30 PM">09:30 PM</option>
+                            <option value="10:00 PM">10:00 PM</option>
+                            <option value="10:30 PM">10:30 PM</option>
+                            <option value="11:00 PM">11:00 PM</option>
+                            <option value="11:30 PM">11:30 PM</option>
+                        </select></div>
                 </div>
                 <div class="mc_section">
                     <h6>Dropoff</h6>
-                    <div class="mc_select mc_select_date"><input class="input_picker dropoff_data" type="date" placeholder="Date" data-target=".dropoff_data" required></div>
-                    <div class="mc_select mc_select_time"><input class="input_picker dropoff_time" type="time" min="09:00" placeholder="Time" data-target=".dropoff_time" required></div>
+                    <div class="mc_select mc_select_date"><input class="input_picker dropoff_data data-picker" type="date" placeholder="Date" data-target=".dropoff_data" required></div>
+                    <div class="mc_select mc_select_time"><select class="input_picker dropoff_time">
+                            <option checked disable value="Time">Time</option>
+                            <option value="12:00 AM">12:00 AM</option>
+                            <option value="12:30 AM">12:30 AM</option>
+                            <option value="01:00 AM">01:00 AM</option>
+                            <option value="01:30 AM">01:30 AM</option>
+                            <option value="02:00 AM">02:00 AM</option>
+                            <option value="02:30 AM">02:30 AM</option>
+                            <option value="03:00 AM">03:00 AM</option>
+                            <option value="03:30 AM">03:30 AM</option>
+                            <option value="04:00 AM">04:00 AM</option>
+                            <option value="04:30 AM">04:30 AM</option>
+                            <option value="05:00 AM">05:00 AM</option>
+                            <option value="05:30 AM">05:30 AM</option>
+                            <option value="06:00 AM">06:00 AM</option>
+                            <option value="06:30 AM">06:30 AM</option>
+                            <option value="07:00 AM">07:00 AM</option>
+                            <option value="07:30 AM">07:30 AM</option>
+                            <option value="08:00 AM">08:00 AM</option>
+                            <option value="08:30 AM">08:30 AM</option>
+                            <option value="09:00 AM">09:00 AM</option>
+                            <option value="09:30 AM">09:30 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="10:30 AM">10:30 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="11:30 AM">11:30 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="12:30 PM">12:30 PM</option>
+                            <option value="01:00 PM">01:00 PM</option>
+                            <option value="01:30 PM">01:30 PM</option>
+                            <option value="02:00 PM">02:00 PM</option>
+                            <option value="02:30 PM">02:30 PM</option>
+                            <option value="03:00 PM">03:00 PM</option>
+                            <option value="03:30 PM">03:30 PM</option>
+                            <option value="04:00 PM">04:00 PM</option>
+                            <option value="04:30 PM">04:30 PM</option>
+                            <option value="05:00 PM">05:00 PM</option>
+                            <option value="05:30 PM">05:30 PM</option>
+                            <option value="06:00 PM">06:00 PM</option>
+                            <option value="06:30 PM">06:30 PM</option>
+                            <option value="07:00 PM">07:00 PM</option>
+                            <option value="07:30 PM">07:30 PM</option>
+                            <option value="08:00 PM">08:00 PM</option>
+                            <option value="08:30 PM">08:30 PM</option>
+                            <option value="09:00 PM">09:00 PM</option>
+                            <option value="09:30 PM">09:30 PM</option>
+                            <option value="10:00 PM">10:00 PM</option>
+                            <option value="10:30 PM">10:30 PM</option>
+                            <option value="11:00 PM">11:00 PM</option>
+                            <option value="11:30 PM">11:30 PM</option>
+                        </select></div>
                 </div>
                 <div class="mc_btn"><button>Search</button></div>
             </form>
@@ -144,7 +246,7 @@
                             </div>
                             <div class="hw-img3">
                                 <div class="k-norm">
-                                    <div class="k-img_wrap"><img src="images/img3.jpg" srcset="images/img3@2x.jpg 2x" alt="img"></div>
+                                    <div class="k-img_wrap"><img src="images/img4.jpg" alt="img"></div>
                                 </div>
                             </div><a class="btn_black" href="#">Sign up</a>
                         </div>
@@ -428,7 +530,7 @@
                         <div class="ims-items">
                             <div class="ims-img ims-img1">
                                 <div class="k-norm">
-                                    <div class="k-img_wrap"><img src="images/b-img1.jpg" srcset="images/b-img1@2x.jpg 2x" alt=""></div>
+                                    <div class="k-img_wrap"><img src="images/b-img1-1.jpg" alt=""></div>
                                 </div>
                             </div>
                             <div class="ims-img ims-img2">
@@ -459,7 +561,7 @@
                             <div class="tt-title_parallax">
                                 <div class="tt-title">
                                     <h2 class="h-title text-c">The future of car ownership</h2>
-                                    <p class="sub-title text-c">The journey is the destination</p>
+                                    <!--p.sub-title.text-c The journey is the destination-->
                                 </div>
                             </div>
                         </div>

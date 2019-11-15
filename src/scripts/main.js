@@ -50,7 +50,7 @@ $(window).on('scroll', function () {
 $(document).ready(function () {
 	
 	if (!mobDev) {
-		$('.input_picker').each(function () {
+		$('.data-picker').each(function () {
 			$(this).attr('type', 'text').addClass('datetimepicker-input').attr('data-toggle','datetimepicker');
 		});
 		
@@ -72,16 +72,16 @@ $(document).ready(function () {
 			$('.pickup_data').datetimepicker('maxDate', e.date);
 		});
 		
-		$('.pickup_time').datetimepicker({
-			format: 'HH:mm',
-			stepping: 30,
-			useCurrent: false,
-		});
-		$('.dropoff_time').datetimepicker({
-			format: 'HH:mm',
-			stepping: 30,
-			useCurrent: false
-		});
+		// $('.pickup_time').datetimepicker({
+		// 	format: 'HH:mm',
+		// 	stepping: 30,
+		// 	useCurrent: false,
+		// });
+		// $('.dropoff_time').datetimepicker({
+		// 	format: 'HH:mm',
+		// 	stepping: 30,
+		// 	useCurrent: false
+		// });
 		
 		// Data script end
 	}
