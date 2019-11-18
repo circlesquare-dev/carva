@@ -154,6 +154,7 @@ $(document).ready(function () {
 		$('.tt-items').slick({
 			arrows: false,
 			autoplay: true,
+			autoplaySpeed: 5000,
 			dots: true,
 			dotsClass: 'slider_dots',
 			slidesToShow: 1

@@ -1,8 +1,9 @@
 .img-section
   position: relative
+  z-index: 2
   @media(max-width: 992px)
     padding: 80px 0
-    overflow: hidden
+    //overflow: hidden
   @media(max-width: 820px)
     background: $yellow
   &, .row
@@ -23,7 +24,14 @@
       border-radius: 100%
       @media(max-width: 992px)
         bottom: -100px
-      @media(max-width: 820px)
+      @media(max-width: 991px)
+        width: 698px
+        height: 698px
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+      @media(max-width: 767px)
         width: 398px
         height: 398px
         left: 0
@@ -44,7 +52,7 @@
     bottom: -90px
     right: 90px
     transition: transform 1s ease-out
-    @media(max-width: 820px)
+    @media(max-width: 991px)
       bottom: 0
       right: 0
       &, img
@@ -58,7 +66,7 @@
     top: -54px
     left: 147px
     transition: transform 0.5s ease-out
-    @media(max-width: 820px)
+    @media(max-width: 991px)
       top: 290px
       left: 61px
       &, img
@@ -72,7 +80,7 @@
     left: -60px
     top: 186px
     transition: transform 0.7s ease-out
-    @media(max-width: 820px)
+    @media(max-width: 991px)
       z-index: 2
       top: 508px
       left: 0
@@ -87,7 +95,7 @@
     right: 20px
     bottom: -238px
     transition: transform 0.4s ease-out
-    @media(max-width: 820px)
+    @media(max-width: 991px)
       bottom: 460px
       right: -34px
       &, img
